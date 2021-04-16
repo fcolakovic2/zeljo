@@ -26,11 +26,41 @@ class _SignInScreenState extends State<SignInScreen> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Row(),
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Flexible(
+                      flex: 1,
+                      child: Image.asset(
+                        'assets/firebase_logo.png',
+                        height: 160,
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                      'FirebaseFireStore',
+                      style: TextStyle(
+                        color: Colors.yellow,
+                        fontSize: 40,
+                      ),
+                    ),
+                    Text(
+                      'Authentication',
+                      style: TextStyle(
+                        color: Colors.orange,
+                        fontSize: 40,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               FutureBuilder(
                 future: Authentication.initializeFirebase(context: context),
                 builder: (context, snapshot) {
                   if (snapshot.hasError) {
-                    return Text('Error initializing Firebase');
+                    return Text('Error prilikom authenticationa');
                   } else if (snapshot.connectionState == ConnectionState.done) {
                     return GoogleSignInButton();
                   }
