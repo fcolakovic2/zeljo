@@ -13,20 +13,23 @@ class _MenuCardState extends State<MenuCard> {
     return Container(
       height: SizeConfig.blockSizeVertical * 20,
       child: Card(
-        shadowColor: Colors.grey[100],
-        color: Colors.grey[100],
+        shadowColor: Colors.grey[50],
+        color: Colors.grey[50],
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(10.0, 5, 0, 5),
-              child: Text('BURGER'),
+              padding: const EdgeInsets.only(left: 10),
+              child: Text(
+                'Hamburger',
+                style: TextStyle(fontSize: 18),
+              ),
             ),
             Padding(
-                padding: const EdgeInsets.fromLTRB(0, 5, 10.0, 5),
+                padding: const EdgeInsets.only(right: 10),
                 child: Container(
-                    width: SizeConfig.blockSizeHorizontal * 35,
-                    height: SizeConfig.blockSizeVertical * 35,
+                    width: SizeConfig.blockSizeHorizontal * 33,
+                    height: SizeConfig.blockSizeVertical * 33,
                     child: Image.asset('assets/images/burger.jpg'))),
           ],
         ),
