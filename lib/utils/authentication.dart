@@ -19,4 +19,30 @@ class Authentication {
 
     return firebaseApp; //mora se uvijek firebase inicijalizirati
   }
+
+  static Future<User?> signInWithGoogle({required BuildContext context}) async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    User? user;
+
+    final GoogleSignIn googleSignIn = GoogleSignIn();
+
+    final GoogleSignInAccount? googleSignInAccount = await googleSignIn
+        .signIn(); //? non nullable, promijenjen pubspec yaml radi toga tj njegov minimum sdk.
+    //uzmem instancu googlesignina i uradim signin koji vrati googlesigninaccount isto not nullable
+
+    if (googleSignInAccount != null) {
+      final GoogleSignInAuthentication googleSignInAuthentication =
+          await googleSignInAccount
+              .authentication; //ako je sign in odradjen, odradi authentication
+
+      final AuthCredential credential = GoogleAuthProvider.credential(
+        accessToken: googleSignInAuthentication.accessToken,
+        idToken: googleSignInAuthentication
+            .idToken, //uzmem credential od authentikacije, poslije pomocu njega provjeravam
+      ); //sta je greska i ima li je u signinu
+
+    }
+
+    return user;
+  }
 }
