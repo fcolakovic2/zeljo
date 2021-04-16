@@ -1,6 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/services/AddOrder.dart';
 import 'package:zeljoprojekat/view/BasketView/pages/BasketScreen.dart';
 
 void main() async {

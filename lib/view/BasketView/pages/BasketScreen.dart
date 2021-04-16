@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/utils/shared/SizeConfig.dart';
+import 'package:zeljoprojekat/view/BasketView/widgets/MainBody.dart';
 
 class BasketScreen extends StatefulWidget {
   @override
@@ -10,21 +10,7 @@ class _BasketScreenState extends State<BasketScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(30),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Korpa'),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
+      body: mainBody(),
     );
   }
 }
