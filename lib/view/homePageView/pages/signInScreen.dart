@@ -1,9 +1,8 @@
-import 'dart:html';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/authentication.dart';
+import 'package:zeljoprojekat/view/homePageView/widgets/googleSignInButton.dart';
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -34,13 +33,13 @@ class _SignInScreenState extends State<SignInScreen> {
                     Flexible(
                       flex: 1,
                       child: Image.asset(
-                        'assets/firebase_logo.png',
+                        'assets/drawable-hdpi/zeljoLogo.png',
                         height: 160,
                       ),
                     ),
                     SizedBox(height: 20),
                     Text(
-                      'FirebaseFireStore',
+                      'Zeljo',
                       style: TextStyle(
                         color: Colors.yellow,
                         fontSize: 40,

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "844944388061-lhj1pu1nod9dfbs39jffhhb84c3c7tr8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ba.example.zeljoprojekat",
+            "certificate_hash": "e18fdf5144c75eb4745e56500bcdb3242d03478e"
+          }
+        },
+        {
           "client_id": "844944388061-go58nbf49bmfrigp17sb6kj3at9v36n3.apps.googleusercontent.com",
           "client_type": 3
         }
