@@ -41,6 +41,33 @@ class Authentication {
             .idToken, //uzmem credential od authentikacije, poslije pomocu njega provjeravam
       ); //sta je greska i ima li je u signinu
 
+      try {
+        final UserCredential userCredential =
+            await auth.signInWithCredential(credential);
+
+        user = userCredential.user;
+      } on FirebaseAuthException catch (e) {
+        if (e.code == 'account-exists-with-different-credential') {
+          ScaffoldMessenger.of(context).showSnackBar(
+            Authentication.displaySnackBar(
+              content: 'Account postoji sa drugim podacima',
+            ),
+          );
+        } else if (e.code == 'invalid-credential') {
+          ScaffoldMessenger.of(context).showSnackBar(
+            Authentication.displaySnackBar(
+              content:
+                  'Greska prilikom ucitavanja vasih podataka. Pokusajte ponovo',
+            ),
+          );
+        }
+      } catch (e) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          Authentication.displaySnackBar(
+            content: 'Error prilikom sign in-a. Pokusajte ponovo',
+          ),
+        );
+      }
     }
 
     return user;
