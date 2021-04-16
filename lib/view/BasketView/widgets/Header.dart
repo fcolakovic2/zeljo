@@ -21,12 +21,6 @@ Widget header() {
             ],
           ),
         ),
-        TextButton(
-          onPressed: Order().addOrder,
-          child: Text(
-            "Add Order",
-          ),
-        ),
       ],
     ),
   );
