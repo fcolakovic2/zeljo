@@ -13,6 +13,7 @@ class _MenuCardState extends State<MenuCard> {
     return Container(
       height: SizeConfig.blockSizeVertical * 20,
       child: Card(
+        shadowColor: Colors.grey[100],
         color: Colors.grey[100],
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

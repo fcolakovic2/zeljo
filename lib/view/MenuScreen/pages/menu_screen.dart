@@ -19,8 +19,20 @@ class _MenuScreenState extends State<MenuScreen> {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [MenuCard(), MenuCard()],
+        child: Container(
+          color: Colors.grey[100],
+          child: Column(
+            children: [
+              MenuCard(),
+              MenuCard(),
+              MenuCard(),
+              MenuCard(),
+              MenuCard(),
+              MenuCard(),
+              MenuCard(),
+              MenuCard(),
+            ],
+          ),
         ),
       ),
     );
