@@ -13,28 +13,32 @@ Widget listViewItems() {
         color: Colors.grey[300],
         child: Card(
           child: Padding(
-            padding: const EdgeInsets.only(top: 15.0),
-            child: ListTile(
-              leading: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      Text('kolicina i naziv'),
-                      Text('prilog', style: Style.prilog),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text("12.00KM"),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-              // title: Text('Entry ${entries[index]}'),
+            padding: const EdgeInsets.fromLTRB(15, 15, 0, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  children: [
+                    Text('kolicina i naziv'),
+                    Text('prilog', style: Style.prilog),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      "12.00KM",
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Icon(
+                        Icons.delete,
+                        size: 26,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ),

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/utils/shared/SizeConfig.dart';
+import 'package:zeljoprojekat/services/Order.dart';
 import 'package:zeljoprojekat/view/BasketView/widgets/Header.dart';
 import 'package:zeljoprojekat/view/BasketView/widgets/ListViewItems.dart';
-import 'package:zeljoprojekat/view/BasketView/widgets/Bottom.dart';
 
 Widget mainBody() {
   return Scaffold(
@@ -13,7 +12,18 @@ Widget mainBody() {
           child: listViewItems(),
           height: 500,
         ),
-        bottom(),
+        Spacer(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: Order().addOrder,
+              child: Text(
+                "Add Order",
+              ),
+            ),
+          ],
+        ),
       ],
     ),
   );
