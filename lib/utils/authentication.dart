@@ -72,4 +72,18 @@ class Authentication {
 
     return user;
   }
+
+  static Future<void> signOut({required BuildContext context}) async {
+    final GoogleSignIn googleSignIn = GoogleSignIn();
+
+    try {
+      await googleSignIn.signOut();
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        Authentication.displaySnackBar(
+          content: 'Error prilikom log outa. Pokusajte ponovo',
+        ),
+      );
+    }
+  }
 }
