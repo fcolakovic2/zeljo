@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeljoprojekat/utils/shared/SizeConfig.dart';
 
 class BasketScreen extends StatefulWidget {
   @override
@@ -13,8 +14,9 @@ class _BasketScreenState extends State<BasketScreen> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(30),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Korpa'),
                 ],
