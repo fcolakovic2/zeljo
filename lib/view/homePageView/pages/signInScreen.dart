@@ -41,7 +41,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         Flexible(
                           flex: 1,
                           child: Image.asset(
-                            'assets/drawable-hdpi/zeljoLogo.png',
+                            'assets/images/zeljoLogo.png',
                             height: 160,
                           ),
                         ),
