@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class Authentication {
-  static SnackBar displaySnackBar({required String content}) {
+  static SnackBar displaySnackBar({String content}) {
     return SnackBar(
       backgroundColor: Colors.black,
       content: Text(
@@ -14,20 +14,19 @@ class Authentication {
     );
   }
 
-  static Future<FirebaseApp> initializeFirebase(
-      {required BuildContext context}) async {
+  static Future<FirebaseApp> initializeFirebase({BuildContext context}) async {
     FirebaseApp firebaseApp = await Firebase.initializeApp();
 
     return firebaseApp; //mora se uvijek firebase inicijalizirati
   }
 
-  static Future<User?> signInWithGoogle({required BuildContext context}) async {
+  static Future<User> signInWithGoogle({BuildContext context}) async {
     FirebaseAuth auth = FirebaseAuth.instance;
-    User? user;
+    User user;
 
     final GoogleSignIn googleSignIn = GoogleSignIn();
 
-    final GoogleSignInAccount? googleSignInAccount = await googleSignIn
+    final GoogleSignInAccount googleSignInAccount = await googleSignIn
         .signIn(); //? non nullable, promijenjen pubspec yaml radi toga tj njegov minimum sdk.
     //uzmem instancu googlesignina i uradim signin koji vrati googlesigninaccount isto not nullable
 
@@ -74,7 +73,7 @@ class Authentication {
     return user;
   }
 
-  static Future<void> signOut({required BuildContext context}) async {
+  static Future<void> signOut({BuildContext context}) async {
     final GoogleSignIn googleSignIn = GoogleSignIn();
 
     try {

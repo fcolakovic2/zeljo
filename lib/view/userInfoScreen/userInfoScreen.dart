@@ -4,7 +4,7 @@ import 'package:zeljoprojekat/utils/authentication.dart';
 import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
 
 class UserInfoScreen extends StatefulWidget {
-  const UserInfoScreen({Key? key, required User user})
+  const UserInfoScreen({Key key, User user})
       : _user = user,
         super(key: key);
 
@@ -15,7 +15,7 @@ class UserInfoScreen extends StatefulWidget {
 }
 
 class _UserInfoScreenState extends State<UserInfoScreen> {
-  late User _user;
+  User _user;
   bool _isSigningOut = false;
 
   Route _routeToSignInScreen() {
@@ -68,7 +68,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                       child: Material(
                         color: Colors.grey.withOpacity(0.3),
                         child: Image.network(
-                          _user.photoURL!,
+                          _user.photoURL,
                           fit: BoxFit.fitHeight,
                         ),
                       ),
@@ -96,7 +96,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               ),
               SizedBox(height: 8.0),
               Text(
-                _user.displayName!,
+                _user.displayName,
                 style: TextStyle(
                   color: Colors.yellow,
                   fontSize: 26,
@@ -104,7 +104,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               ),
               SizedBox(height: 8.0),
               Text(
-                '( ${_user.email!} )',
+                '( ${_user.email} )',
                 style: TextStyle(
                   color: Colors.orange,
                   fontSize: 20,

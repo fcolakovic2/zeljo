@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/authentication.dart';
+import 'package:zeljoprojekat/utils/shared/sizeConfig.dart';
 import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
 import 'package:zeljoprojekat/view/userInfoScreen/userInfoScreen.dart';
 
@@ -14,8 +15,10 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Container(
-      height: 100,
+      height: SizeConfig.screenHeight * 0.05,
+      width: SizeConfig.screenWidth,
       child: _isSigningIn
           ? CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
@@ -34,7 +37,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                   _isSigningIn = true;
                 });
 
-                User? user =
+                User user =
                     await Authentication.signInWithGoogle(context: context);
 
                 setState(() {
