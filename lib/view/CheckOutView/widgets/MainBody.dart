@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/Header.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/ListViewItems.dart';
-import 'package:zeljoprojekat/viewModel/ChecKOutViewModel.dart';
+import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
 Widget mainBody(context) {
   return Scaffold(

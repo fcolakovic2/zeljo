@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/MainBody.dart';
-import 'package:zeljoprojekat/viewModel/ChecKOutViewModel.dart';
+import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
 class CheckOutScreen extends StatefulWidget {
   @override
@@ -10,7 +10,6 @@ class CheckOutScreen extends StatefulWidget {
 class _CheckOutScreenState extends State<CheckOutScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     orderStatusNotification(context);
   }
