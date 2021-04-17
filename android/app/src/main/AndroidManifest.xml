@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ba.example.zeljoprojekat">
+<uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="zeljoprojekat"
         android:icon="@mipmap/ic_launcher">

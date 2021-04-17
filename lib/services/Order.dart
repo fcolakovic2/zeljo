@@ -18,11 +18,11 @@ class Order {
         .catchError((error) => print("Failed to add order: $error"));
   }
 
-  // void printOrderStatus() {
-  //   orders.get().then((querySnapshot) {
-  //     querySnapshot.docs.forEach((result) {
-  //       print(result.data());
-  //     });
-  //   });
-  // }
+  void printOrderStatus() {
+    orders.get().then((querySnapshot) {
+      querySnapshot.docs.forEach((result) {
+        print(result.data());
+      });
+    });
+  }
 }
