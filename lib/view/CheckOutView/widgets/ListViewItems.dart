@@ -19,8 +19,14 @@ Widget listViewItems() {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('kolicina i naziv'),
-                  Text('prilog', style: Style.prilog),
+                  Text(
+                    'kolicina i naziv',
+                    style: Style.boldText,
+                  ),
+                  Text(
+                    'prilog',
+                    style: Style.prilog,
+                  ),
                 ],
               ),
             ),
@@ -30,12 +36,14 @@ Widget listViewItems() {
               children: [
                 Text(
                   "12.00KM",
+                  style: Style.boldText,
                 ),
                 TextButton(
                   onPressed: () {},
                   child: Icon(
                     Icons.delete,
                     size: 26,
+                    color: Colors.grey[500],
                   ),
                 ),
               ],

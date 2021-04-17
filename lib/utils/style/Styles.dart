@@ -21,4 +21,8 @@ class Style {
   static final TextStyle yellowButtonText = TextStyle(
     color: Colors.black,
   );
+
+  static final TextStyle boldText = TextStyle(
+    fontWeight: FontWeight.bold,
+  );
 }
