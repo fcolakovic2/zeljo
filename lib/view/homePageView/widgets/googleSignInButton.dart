@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:zeljoprojekat/navigationBar.dart';
 import 'package:zeljoprojekat/utils/authentication.dart';
 import 'package:zeljoprojekat/utils/shared/sizeConfig.dart';
 import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
-import 'package:zeljoprojekat/view/userInfoScreen/userInfoScreen.dart';
 
 class GoogleSignInButton extends StatefulWidget {
   @override
@@ -47,9 +47,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                 if (user != null) {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => UserInfoScreen(
-                        user: user,
-                      ),
+                      builder: (context) => MyStatefulWidget(),
                     ),
                   );
                 }
