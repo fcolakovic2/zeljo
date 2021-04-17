@@ -13,16 +13,9 @@ class Order {
     return orders
         .add({
           'orderStatus': "onPending",
+          'created': Timestamp.now(),
         })
         .then((value) => print("Order added"))
         .catchError((error) => print("Failed to add order: $error"));
-  }
-
-  void printOrderStatus() {
-    orders.get().then((querySnapshot) {
-      querySnapshot.docs.forEach((result) {
-        print(result.data());
-      });
-    });
   }
 }

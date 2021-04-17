@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/services/Order.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/Header.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/ListViewItems.dart';
+import 'package:zeljoprojekat/viewModel/ChecKOutViewModel.dart';
 
-Widget mainBody() {
+Widget mainBody(context) {
   return Scaffold(
     body: Column(
       children: [
@@ -17,7 +17,7 @@ Widget mainBody() {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
-              onPressed: Order().addOrder,
+              onPressed: () => addOrder(),
               child: Text(
                 "Add Order",
               ),
