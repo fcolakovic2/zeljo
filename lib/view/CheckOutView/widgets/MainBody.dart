@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/services/Order.dart';
-import 'package:zeljoprojekat/view/BasketView/widgets/Header.dart';
-import 'package:zeljoprojekat/view/BasketView/widgets/ListViewItems.dart';
+import 'package:zeljoprojekat/view/CheckOutView/widgets/Header.dart';
+import 'package:zeljoprojekat/view/CheckOutView/widgets/ListViewItems.dart';
 
 Widget mainBody() {
   return Scaffold(
