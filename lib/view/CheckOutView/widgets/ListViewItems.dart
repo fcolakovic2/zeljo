@@ -5,42 +5,42 @@ Widget listViewItems() {
   final List<String> entries = <String>['A', 'B', 'C'];
 
   return ListView.separated(
-    padding: const EdgeInsets.all(8),
+    // padding: const EdgeInsets.all(8),
     itemCount: entries.length,
     itemBuilder: (BuildContext context, int index) {
       return Container(
-        height: 80,
-        color: Colors.grey[300],
-        child: Card(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(15, 15, 0, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        height: 100,
+        color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('kolicina i naziv'),
+                  Text('prilog', style: Style.prilog),
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Column(
-                  children: [
-                    Text('kolicina i naziv'),
-                    Text('prilog', style: Style.prilog),
-                  ],
+                Text(
+                  "12.00KM",
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      "12.00KM",
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Icon(
-                        Icons.delete,
-                        size: 26,
-                      ),
-                    ),
-                  ],
+                TextButton(
+                  onPressed: () {},
+                  child: Icon(
+                    Icons.delete,
+                    size: 26,
+                  ),
                 ),
               ],
             ),
-          ),
+          ],
         ),
       );
     },

@@ -13,4 +13,12 @@ class Style {
   static final BoxDecoration border = BoxDecoration(
     border: Border(bottom: BorderSide(width: 1.0, color: Color(0xFFFF000000))),
   );
+
+  static final ButtonStyle yellowButton = TextButton.styleFrom(
+    backgroundColor: Colors.amber,
+  );
+
+  static final TextStyle yellowButtonText = TextStyle(
+    color: Colors.black,
+  );
 }

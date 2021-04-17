@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zeljoprojekat/utils/shared/SizeConfig.dart';
+import 'package:zeljoprojekat/utils/style/Styles.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/Header.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/ListViewItems.dart';
 import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
@@ -16,10 +18,15 @@ Widget mainBody(context) {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(
-              onPressed: () => addOrder(),
-              child: Text(
-                "Add Order",
+            Container(
+              width: MediaQuery.of(context).size.width * 0.9,
+              child: TextButton(
+                onPressed: () => addOrder(),
+                child: Text(
+                  "Proslijedi",
+                  style: Style.yellowButtonText,
+                ),
+                style: Style.yellowButton,
               ),
             ),
           ],
