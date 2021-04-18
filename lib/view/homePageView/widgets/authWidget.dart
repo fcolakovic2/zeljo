@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/utils/authentication.dart';
 import 'package:zeljoprojekat/view/homePageView/widgets/googleSignInButton.dart';
+import 'package:zeljoprojekat/viewModel/signInViewModel.dart';
 
 class AuthWidget extends StatelessWidget {
   const AuthWidget({
@@ -10,7 +10,7 @@ class AuthWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: Authentication.initializeFirebase(context: context),
+      future: initializeFirebase(context),
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Text('Error prilikom authenticationa');

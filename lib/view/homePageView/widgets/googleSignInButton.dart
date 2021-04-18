@@ -1,10 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/navigationBar.dart';
-import 'package:zeljoprojekat/utils/authentication.dart';
 import 'package:zeljoprojekat/utils/shared/sizeConfig.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
-import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
 import 'package:zeljoprojekat/view/homePageView/widgets/googleLogo.dart';
 import 'package:zeljoprojekat/view/homePageView/widgets/googleTekst.dart';
 import 'package:zeljoprojekat/viewModel/signInViewModel.dart';
