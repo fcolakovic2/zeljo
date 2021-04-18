@@ -66,16 +66,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Korpa',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.leave_bags_at_home),
+            icon: Image.asset(
+              'assets/images/ikonicaStar.png',
+              width: 24.0,
+              height: 24.0,
+            ),
             label: 'Restorani',
           ),
           BottomNavigationBarItem(
-              icon: Image.asset(
-                'assets/images/ikonicaStar.png',
-                width: 24.0,
-                height: 24.0,
-              ),
-              label: 'Naruči sad'),
+              icon: Icon(Icons.shopping_cart), label: 'Naruči sad'),
           BottomNavigationBarItem(
             icon: Icon(Icons.location_pin),
             label: 'Narudžbe',
