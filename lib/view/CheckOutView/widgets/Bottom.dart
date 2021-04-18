@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/style/Styles.dart';
-
-String pom() {
-  double cijenaUkupna = 0;
-  for (var i = 0; i < cijena.length; i++) {
-    cijenaUkupna += double.parse(cijena[i]);
-  }
-  ukupnaCijena = cijenaUkupna.toString();
-  return ukupnaCijena;
-}
 
 class Bottom extends StatefulWidget {
   @override
@@ -20,15 +12,13 @@ class _BottomState extends State<Bottom> {
   @override
   void initState() {
     super.initState();
-    pom();
+    changePrice();
   }
 
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 1), () {
-      setState(() {
-        // ukupnaCijena = pom();
-      });
+      setState(() {});
     });
 
     return Container(

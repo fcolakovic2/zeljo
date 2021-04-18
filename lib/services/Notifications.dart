@@ -30,6 +30,7 @@ class Notifications {
     var platformChannelSpecifics = NotificationDetails(
         androidPlatformChannelSpecifics, iOSChannelSpecifics);
 
+    //u koliko je status prihvacen salje notifikaciju da je prihvacena a u suprotnom odbacena
     if (change.doc.get("orderStatus") == "accepted") {
       await flutterLocalNotificationsPlugin.show(0, 'Poštovanje',
           'Vaša narudžba je prihvaćena', platformChannelSpecifics,
@@ -41,6 +42,7 @@ class Notifications {
     }
   }
 
+  // provjerava koji dokument je izmijenjen i njega salje dalje u metodu shownotification
   void orderStatusNotification() {
     Order().orders.snapshots().listen((querySnapshot) {
       querySnapshot.docChanges.forEach((change) {
@@ -83,7 +85,6 @@ class Notifications {
   }
 
   void initialize() {
-    print("sssss");
     initializationSettingsAndroid =
         new AndroidInitializationSettings('app_icon');
     initializationSettingsIOS = new IOSInitializationSettings(

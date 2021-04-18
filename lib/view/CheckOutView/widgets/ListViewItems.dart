@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/style/Styles.dart';
-import 'package:zeljoprojekat/view/CheckOutView/widgets/Bottom.dart';
+import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
 class ListViewItems extends StatefulWidget {
   @override
@@ -27,7 +27,7 @@ class _ListViewItemsState extends State<ListViewItems> {
                 naziv.removeAt(index);
                 prilog.removeAt(index);
                 cijena.removeAt(index);
-                pom();
+                changePrice();
               });
             },
 
@@ -78,7 +78,7 @@ class _ListViewItemsState extends State<ListViewItems> {
                             naziv.removeAt(index);
                             prilog.removeAt(index);
                             cijena.removeAt(index);
-                            pom();
+                            changePrice();
                           });
                         },
                         child: Icon(
