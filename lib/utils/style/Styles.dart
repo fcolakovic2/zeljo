@@ -25,4 +25,9 @@ class Style {
   static final TextStyle boldText = TextStyle(
     fontWeight: FontWeight.bold,
   );
+
+  static final TextStyle boldBigText = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 20,
+  );
 }

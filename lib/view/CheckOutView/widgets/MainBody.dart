@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/services/Notifications.dart';
 import 'package:zeljoprojekat/utils/style/Styles.dart';
+import 'package:zeljoprojekat/view/CheckOutView/widgets/Bottom.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/Header.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/ListViewItems.dart';
 import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
@@ -14,6 +14,7 @@ Widget mainBody(context) {
           child: listViewItems(),
           height: 500,
         ),
+        bottom(),
         Spacer(),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
