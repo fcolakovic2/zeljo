@@ -1,9 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/homePageView/widgets/authWidget.dart';
 import 'package:zeljoprojekat/view/homePageView/widgets/backgroundWidget.dart';
-import 'package:zeljoprojekat/view/homePageView/widgets/googleSignInButton.dart';
 import 'package:zeljoprojekat/view/homePageView/widgets/zeljoLogo.dart';
 
 class SignInScreen extends StatefulWidget {

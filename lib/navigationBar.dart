@@ -60,21 +60,24 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Korpa',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: Icon(Icons.leave_bags_at_home),
             label: 'Restorani',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Naruči sad',
-          ),
+              icon: Image.asset(
+                'assets/images/ikonicaStar.png',
+                width: 24.0,
+                height: 24.0,
+              ),
+              label: 'Naruči sad'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: Icon(Icons.location_pin),
             label: 'Narudžbe',
           ),
         ],
