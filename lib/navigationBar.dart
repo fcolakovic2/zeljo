@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
 import 'package:zeljoprojekat/view/CheckOutView/pages/CheckOutScreen.dart';
 
 void main() => runApp(const MyApp());
