@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeljoprojekat/view/CheckOutView/pages/CheckOutScreen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -28,7 +29,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
+  static List<Widget> _widgetOptions = <Widget>[
     Text(
       'Index 0: Korpa',
       style: optionStyle,
@@ -37,10 +38,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       'Index 1: Restorani',
       style: optionStyle,
     ),
-    Text(
-      'Index 2: Naruči sad',
-      style: optionStyle,
-    ),
+    CheckOutScreen(),
     Text(
       'Index 3: Narudžbe',
       style: optionStyle,
@@ -74,10 +72,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Restorani',
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart), label: 'Naruči sad'),
+            icon: Icon(Icons.shopping_cart),
+            label: 'Naruči sad',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.location_pin),
-            label: 'Narudžbe',
+            label: 'Naruči sad',
           ),
         ],
         currentIndex: _selectedIndex,
