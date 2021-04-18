@@ -15,4 +15,7 @@ class Styles {
       ),
     ),
   );
+
+  static final TextStyle stilUsera =
+      TextStyle(color: Colors.grey, letterSpacing: 0.2);
 }
