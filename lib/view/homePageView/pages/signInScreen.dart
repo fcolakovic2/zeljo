@@ -2,7 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/authentication.dart';
+import 'package:zeljoprojekat/view/homePageView/widgets/authWidget.dart';
+import 'package:zeljoprojekat/view/homePageView/widgets/backgroundWidget.dart';
 import 'package:zeljoprojekat/view/homePageView/widgets/googleSignInButton.dart';
+import 'package:zeljoprojekat/view/homePageView/widgets/zeljoLogo.dart';
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -14,12 +17,7 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        Image.asset(
-          'assets/images/login_background.png',
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          fit: BoxFit.cover,
-        ),
+        BackgroundWidget(),
         Scaffold(
           backgroundColor: Colors.transparent,
           body: SafeArea(
@@ -33,38 +31,8 @@ class _SignInScreenState extends State<SignInScreen> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Row(),
-                  Expanded(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Flexible(
-                          flex: 1,
-                          child: Image.asset(
-                            'assets/images/zeljoLogo.png',
-                            height: 160,
-                          ),
-                        ),
-                        SizedBox(height: 20),
-                      ],
-                    ),
-                  ),
-                  FutureBuilder(
-                    future: Authentication.initializeFirebase(context: context),
-                    builder: (context, snapshot) {
-                      if (snapshot.hasError) {
-                        return Text('Error prilikom authenticationa');
-                      } else if (snapshot.connectionState ==
-                          ConnectionState.done) {
-                        return GoogleSignInButton();
-                      }
-                      return CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          Colors.orange,
-                        ),
-                      );
-                    },
-                  ),
+                  ZeljoLogoWidget(),
+                  AuthWidget(),
                 ],
               ),
             ),
