@@ -11,10 +11,10 @@ Widget mainBody(context) {
       children: [
         header(),
         Container(
-          child: listViewItems(),
+          child: ListViewItems(),
           height: 500,
         ),
-        bottom(),
+        Bottom(),
         Spacer(),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

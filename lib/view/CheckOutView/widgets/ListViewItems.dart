@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/style/Styles.dart';
-import 'package:zeljoprojekat/view/CheckOutView/pages/CheckOutScreen.dart';
+import 'package:zeljoprojekat/view/CheckOutView/widgets/Bottom.dart';
 
-class listViewItems extends StatefulWidget {
+class ListViewItems extends StatefulWidget {
   @override
-  _listViewItemsState createState() => _listViewItemsState();
+  _ListViewItemsState createState() => _ListViewItemsState();
 }
 
-class _listViewItemsState extends State<listViewItems> {
+class _ListViewItemsState extends State<ListViewItems> {
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: Style.border,
       child: ListView.separated(
-        itemCount: entries.length,
+        itemCount: naziv.length,
         itemBuilder: (BuildContext context, int index) {
           return Dismissible(
             key: UniqueKey(),
@@ -24,7 +24,10 @@ class _listViewItemsState extends State<listViewItems> {
 
             onDismissed: (_) {
               setState(() {
-                entries.removeAt(index);
+                naziv.removeAt(index);
+                prilog.removeAt(index);
+                cijena.removeAt(index);
+                pom();
               });
             },
 
@@ -48,13 +51,14 @@ class _listViewItemsState extends State<listViewItems> {
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'kolicina i naziv',
+                          naziv[index],
                           style: Style.boldText,
                         ),
                         Text(
-                          'prilog',
+                          prilog[index],
                           style: Style.prilog,
                         ),
                       ],
@@ -65,13 +69,16 @@ class _listViewItemsState extends State<listViewItems> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "12.00KM",
+                        cijena[index] + " KM",
                         style: Style.boldText,
                       ),
                       TextButton(
                         onPressed: () {
                           setState(() {
-                            entries.removeAt(index);
+                            naziv.removeAt(index);
+                            prilog.removeAt(index);
+                            cijena.removeAt(index);
+                            pom();
                           });
                         },
                         child: Icon(
