@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/utils/style/Styles.dart';
+import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/Bottom.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/Header.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/ListViewItems.dart';
@@ -7,6 +7,7 @@ import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
 Widget mainBody(context) {
   return Scaffold(
+    backgroundColor: Colors.white,
     body: Column(
       children: [
         header(),
@@ -25,9 +26,9 @@ Widget mainBody(context) {
                 onPressed: () => addOrder(),
                 child: Text(
                   "Proslijedi",
-                  style: Style.yellowButtonText,
+                  style: Styles.yellowButtonText,
                 ),
-                style: Style.yellowButton,
+                style: Styles.yellowButton,
               ),
             ),
           ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
-import 'package:zeljoprojekat/utils/style/Styles.dart';
 
 class Bottom extends StatefulWidget {
   @override
@@ -22,7 +22,7 @@ class _BottomState extends State<Bottom> {
     });
 
     return Container(
-      decoration: Style.border,
+      decoration: Styles.border,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20, 20, 20, 50),
         child: Row(
@@ -34,11 +34,11 @@ class _BottomState extends State<Bottom> {
               children: [
                 Text(
                   "Total narudžbe",
-                  style: Style.boldBigText,
+                  style: Styles.boldBigText,
                 ),
                 Text(
                   ukupnaCijena,
-                  style: Style.boldBigText,
+                  style: Styles.boldBigText,
                 ),
               ],
             ),

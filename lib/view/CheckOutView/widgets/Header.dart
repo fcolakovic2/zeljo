@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/utils/style/Styles.dart';
+import 'package:zeljoprojekat/utils/style/style.dart';
 
 Widget header() {
   return SafeArea(
     child: Column(
       children: [
         Container(
-          decoration: Style.border,
+          decoration: Styles.border,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -14,7 +14,7 @@ Widget header() {
                 padding: const EdgeInsets.all(25.0),
                 child: Text(
                   'Korpa',
-                  style: Style.headerBasket,
+                  style: Styles.headerBasket,
                 ),
               ),
             ],

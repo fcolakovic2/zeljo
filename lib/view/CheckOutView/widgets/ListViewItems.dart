@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
-import 'package:zeljoprojekat/utils/style/Styles.dart';
+import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
 class ListViewItems extends StatefulWidget {
@@ -12,7 +12,7 @@ class _ListViewItemsState extends State<ListViewItems> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: Style.border,
+      decoration: Styles.border,
       child: ListView.separated(
         itemCount: naziv.length,
         itemBuilder: (BuildContext context, int index) {
@@ -55,11 +55,11 @@ class _ListViewItemsState extends State<ListViewItems> {
                       children: [
                         Text(
                           naziv[index],
-                          style: Style.boldText,
+                          style: Styles.boldText,
                         ),
                         Text(
                           prilog[index],
-                          style: Style.prilog,
+                          style: Styles.prilog,
                         ),
                       ],
                     ),
@@ -70,7 +70,7 @@ class _ListViewItemsState extends State<ListViewItems> {
                     children: [
                       Text(
                         cijena[index] + " KM",
-                        style: Style.boldText,
+                        style: Styles.boldText,
                       ),
                       TextButton(
                         onPressed: () {
