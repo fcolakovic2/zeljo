@@ -7,3 +7,6 @@ firebase_auth=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dart
 firebase_auth_web=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-1.0.6/
 firebase_core=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.0.3/
 firebase_core_web=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.0.2/
+flutter_local_notifications=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.8.4+3/
+google_sign_in=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-5.0.2/
+google_sign_in_web=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.10.0/
