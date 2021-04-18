@@ -4,6 +4,7 @@ import 'package:zeljoprojekat/navigationBar.dart';
 import 'package:zeljoprojekat/utils/authentication.dart';
 import 'package:zeljoprojekat/utils/shared/sizeConfig.dart';
 import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
+import 'package:zeljoprojekat/viewModel/signInViewModel.dart';
 
 class GoogleSignInButton extends StatefulWidget {
   @override
@@ -44,13 +45,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                   _isSigningIn = false;
                 });
 
-                if (user != null) {
-                  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (context) => MyStatefulWidget(),
-                    ),
-                  );
-                }
+                signInFunction(context);
               },
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
