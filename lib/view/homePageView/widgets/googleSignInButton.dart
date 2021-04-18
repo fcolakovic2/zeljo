@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/navigationBar.dart';
 import 'package:zeljoprojekat/utils/authentication.dart';
 import 'package:zeljoprojekat/utils/shared/sizeConfig.dart';
+import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
+import 'package:zeljoprojekat/view/homePageView/widgets/googleLogo.dart';
+import 'package:zeljoprojekat/view/homePageView/widgets/googleTekst.dart';
 import 'package:zeljoprojekat/viewModel/signInViewModel.dart';
 
 class GoogleSignInButton extends StatefulWidget {
@@ -13,7 +16,6 @@ class GoogleSignInButton extends StatefulWidget {
 
 class _GoogleSignInButtonState extends State<GoogleSignInButton> {
   bool _isSigningIn = false;
-
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -25,26 +27,16 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
             )
           : OutlinedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.white),
-                shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
-                  ),
-                ),
-              ),
+              style: Styles.stilDugmeta,
               onPressed: () async {
                 setState(() {
                   _isSigningIn = true;
                 });
-
                 User user =
                     await Authentication.signInWithGoogle(context: context);
-
                 setState(() {
                   _isSigningIn = false;
                 });
-
                 signInFunction(context);
               },
               child: Padding(
@@ -52,28 +44,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                 child: Row(
                   //  mainAxisSize: MainAxisSize.min,
                   //  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Image(
-                        image: AssetImage("assets/images/google_logo.png"),
-                        alignment: Alignment.centerLeft,
-                        height: 35.0,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        'Sign in with Google',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.black54,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    )
-                  ],
+                  children: <Widget>[GoogleLogo(), GoogleTekst()],
                 ),
               ),
             ),
