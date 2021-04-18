@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:zeljoprojekat/services/Order.dart';
+import 'package:zeljoprojekat/view/CheckOutView/pages/CheckOutScreen.dart';
 
 class Notifications {
   var context;
@@ -12,6 +13,7 @@ class Notifications {
   var initializationSettingsAndroid;
   var initializationSettingsIOS;
   var initializationSettings;
+  Notifications.initialize();
 
   void showNotification(change) async {
     await _demoNotification(change);
@@ -54,7 +56,7 @@ class Notifications {
       debugPrint('Notification payload: $payload');
     }
     await Navigator.push(context,
-        new MaterialPageRoute(builder: (context) => new SecondRoute()));
+        new MaterialPageRoute(builder: (context) => new CheckOutScreen()));
   }
 
   Future onDidReceiveLocalNotification(
@@ -70,8 +72,10 @@ class Notifications {
                   child: Text('Ok'),
                   onPressed: () async {
                     Navigator.of(context, rootNavigator: true).pop();
-                    await Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SecondRoute()));
+                    await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CheckOutScreen()));
                   },
                 )
               ],
@@ -79,6 +83,7 @@ class Notifications {
   }
 
   void initialize() {
+    print("sssss");
     initializationSettingsAndroid =
         new AndroidInitializationSettings('app_icon');
     initializationSettingsIOS = new IOSInitializationSettings(
@@ -87,24 +92,5 @@ class Notifications {
         initializationSettingsAndroid, initializationSettingsIOS);
     flutterLocalNotificationsPlugin.initialize(initializationSettings,
         onSelectNotification: onSelectNotification);
-  }
-}
-
-class SecondRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('AlertPage'),
-      ),
-      body: Center(
-        child: RaisedButton(
-          child: Text('go Back ...'),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
-    );
   }
 }
