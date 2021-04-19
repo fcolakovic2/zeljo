@@ -14,7 +14,15 @@ class _TextCardState extends State<TextCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shape: RoundedRectangleBorder(
+        side: BorderSide(color: Colors.white70, width: 1),
+        borderRadius: BorderRadius.circular(10),
+      ),
       child: ListTile(
+        shape: RoundedRectangleBorder(
+          side: BorderSide(color: Colors.white70, width: 1),
+          borderRadius: BorderRadius.circular(10),
+        ),
         tileColor: Colors.white,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -22,15 +30,30 @@ class _TextCardState extends State<TextCard> {
             Text(
               convertDateTimeDisplay(
                   widget.document['created'].toDate().toString()),
-              style: TextStyle(color: Colors.green),
+              style: TextStyle(
+                color: widget.document['orderStatus'] == 'accepted'
+                    ? Colors.green
+                    : widget.document['orderStatus'] == "onPending"
+                        ? Colors.black
+                        : Colors.red,
+              ),
             ),
             Text(
               widget.document['orderStatus'],
-              style: TextStyle(color: Colors.green),
+              style: TextStyle(
+                  color: widget.document['orderStatus'] == 'accepted'
+                      ? Colors.green
+                      : widget.document['orderStatus'] == 'onPending'
+                          ? Colors.black
+                          : Colors.red),
             ),
             Text(
-              "19.60",
-              style: TextStyle(color: Colors.green),
+              widget.document['price'],
+              style: TextStyle(
+                color: widget.document['orderStatus'] == 'accepted'
+                    ? Colors.green
+                    : Colors.red,
+              ),
             ),
           ],
         ),

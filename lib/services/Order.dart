@@ -1,6 +1,7 @@
 // Import the firebase_core and cloud_firestore plugin
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 
 class Order {
   Order();
@@ -14,6 +15,7 @@ class Order {
         .add({
           'orderStatus': "onPending",
           'created': Timestamp.now(),
+          'price': cijena[1],
         })
         .then((value) => print("Order added"))
         .catchError((error) => print("Failed to add order: $error"));
