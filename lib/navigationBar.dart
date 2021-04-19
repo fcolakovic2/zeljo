@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/CheckOutView/pages/checkOutScreen.dart';
+import 'package:zeljoprojekat/view/MenuScreen/pages/menu_screen.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/pages/mealDetailsView.dart';
 
 void main() => runApp(const MyApp());
@@ -35,7 +36,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       'Index 0: Korpa',
       style: optionStyle,
     ),
-    MealDetails(),
+    MenuScreen(),
     CheckOutScreen(),
     Text(
       'Index 3: Narudžbe',
