@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/services/addMeal.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
-import 'package:zeljoprojekat/utils/shared/sizeConfig.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/widgets/listViewMeal.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/widgets/mealImage.dart';

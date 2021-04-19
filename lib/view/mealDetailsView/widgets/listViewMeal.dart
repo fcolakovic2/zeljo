@@ -38,7 +38,6 @@ class _ListViewMealState extends State<ListViewMeal> {
                           setState(() {
                             pozicija = index;
                           });
-                          // AddMeal().addMeal(index, widget.document);
                           indexRadio = index;
                         },
                       ),
