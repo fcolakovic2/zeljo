@@ -14,17 +14,14 @@ class _TextCardState extends State<TextCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.white,
       shape: RoundedRectangleBorder(
-        side: BorderSide(color: Colors.white70, width: 1),
+        side: BorderSide(color: Colors.blue, width: 1),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: ListTile(
-        shape: RoundedRectangleBorder(
-          side: BorderSide(color: Colors.white70, width: 1),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        tileColor: Colors.white,
-        title: Row(
+      child: Padding(
+        padding: const EdgeInsets.all(18.0),
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
@@ -52,7 +49,9 @@ class _TextCardState extends State<TextCard> {
               style: TextStyle(
                 color: widget.document['orderStatus'] == 'accepted'
                     ? Colors.green
-                    : Colors.red,
+                    : widget.document['orderStatus'] == 'onPending'
+                        ? Colors.black
+                        : Colors.red,
               ),
             ),
           ],
