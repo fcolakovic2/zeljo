@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/CheckOutView/pages/checkOutScreen.dart';
-import 'package:zeljoprojekat/view/mealDetailsView/mealDetailsView.dart';
+import 'package:zeljoprojekat/view/mealDetailsView/pages/mealDetailsView.dart';
 
 void main() => runApp(const MyApp());
 
