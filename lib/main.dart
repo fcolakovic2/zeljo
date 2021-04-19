@@ -17,8 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Željo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        brightness: Brightness.dark,
+        primarySwatch: Colors.amber,
       ),
       home: FutureBuilder(
         builder: (context, snapshot) {

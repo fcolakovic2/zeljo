@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/view/CheckOutView/pages/CheckOutScreen.dart';
+import 'package:zeljoprojekat/view/CheckOutView/pages/checkOutScreen.dart';
+import 'package:zeljoprojekat/view/mealDetailsView/mealDetailsView.dart';
 
 void main() => runApp(const MyApp());
 
@@ -34,10 +35,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       'Index 0: Korpa',
       style: optionStyle,
     ),
-    Text(
-      'Index 1: Restorani',
-      style: optionStyle,
-    ),
+    MealDetails(),
     CheckOutScreen(),
     Text(
       'Index 3: Narudžbe',
@@ -60,7 +58,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              color: Colors.grey,
+            ),
             label: 'Korpa',
           ),
           BottomNavigationBarItem(
@@ -68,20 +69,27 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               'assets/images/ikonicaStar.png',
               width: 24.0,
               height: 24.0,
+              color: Colors.grey,
             ),
             label: 'Restorani',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Colors.grey,
+            ),
             label: 'Naruči sad',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.location_pin),
+            icon: Icon(
+              Icons.location_pin,
+              color: Colors.grey,
+            ),
             label: 'Narudžbe',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.grey,
         onTap: _onItemTapped,
       ),
     );

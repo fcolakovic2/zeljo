@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
-import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
+import 'package:zeljoprojekat/viewModel/checkOutViewModel.dart';
 
 class ListViewItems extends StatefulWidget {
   @override
