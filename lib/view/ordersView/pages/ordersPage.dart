@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:zeljoprojekat/view/ordersView/widgets/TextCard.dart';
+import 'package:zeljoprojekat/view/ordersView/widgets/appBarText.dart';
 
 String convertDateTimeDisplay(String date) {
   final DateFormat displayFormater = DateFormat('yyyy-MM-dd HH:mm:ss.SSS');
@@ -20,7 +22,11 @@ class _OrderPageState extends State<OrderPage> {
 
   @override
   Widget build(BuildContext context) {
-    List<Timestamp> datumi = [];
+    /*  Future.delayed(const Duration(milliseconds: 1), () {
+      setState(() {});
+    });*/
+
+    /*  List<Timestamp> datumi = [];
     List<String> status = [];
 
     orders.snapshots().forEach((element) {
@@ -35,7 +41,22 @@ class _OrderPageState extends State<OrderPage> {
       });
     });
 
+    @override
+    void initState() {
+      datumi.clear();
+      status.clear();
+      super.initState();
+    }
+*/
     return Scaffold(
+        appBar: AppBar(
+          shadowColor: Colors.white,
+          toolbarHeight: 80,
+          backgroundColor: Colors.white,
+          title: appBarText(),
+          centerTitle: true,
+        ),
+        backgroundColor: Colors.white,
         body: StreamBuilder(
             stream: FirebaseFirestore.instance.collection('orders').snapshots(),
             builder:
@@ -43,22 +64,11 @@ class _OrderPageState extends State<OrderPage> {
               if (!snapshot.hasData) {
                 return Center(child: CircularProgressIndicator());
               }
+
               return ListView.builder(
-                  itemCount: status.length,
+                  itemCount: snapshot.data.docs.length,
                   itemBuilder: (context, index) {
-                    return Card(
-                      child: ListTile(
-                        title: Center(
-                          child: Row(
-                            children: [
-                              Text(status[index]),
-                              Text(convertDateTimeDisplay(
-                                  datumi[index].toDate().toString())),
-                            ],
-                          ),
-                        ),
-                      ),
-                    );
+                    return TextCard(context, snapshot.data.docs[index]);
                   });
             }));
   }
