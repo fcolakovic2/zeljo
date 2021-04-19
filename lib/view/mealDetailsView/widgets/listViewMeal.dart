@@ -9,8 +9,6 @@ class ListViewMeal extends StatefulWidget {
   _ListViewMealState createState() => _ListViewMealState();
 }
 
-List porcije = ["Mala porcija", "Srednja porcija", "Velika porcija"];
-
 class _ListViewMealState extends State<ListViewMeal> {
   String _porcija = porcije[0];
   int pozicija = 0;

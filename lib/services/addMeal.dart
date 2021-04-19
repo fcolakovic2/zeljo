@@ -1,11 +1,11 @@
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
-import 'package:zeljoprojekat/view/mealDetailsView/widgets/listViewMeal.dart';
 
 class AddMeal {
   AddMeal();
 
   void addMeal(index, document) {
     naziv.add(document['name']);
+    print(index);
     velicina.add(porcije[index]);
     if (index == 0) cijena.add(document["mala_porcija"]);
 
