@@ -8,32 +8,36 @@ import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 Widget mainBody(context) {
   return Scaffold(
     backgroundColor: Colors.white,
-    body: Column(
-      children: [
-        header(),
-        Container(
-          child: ListViewItems(),
-          height: 500,
-        ),
-        Bottom(),
-        Spacer(),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: MediaQuery.of(context).size.width * 0.9,
-              child: TextButton(
-                onPressed: () => addOrder(),
-                child: Text(
-                  "Proslijedi",
-                  style: Styles.yellowButtonText,
+    body: Container(
+      height: MediaQuery.of(context).size.height,
+      child: Column(
+        children: [
+          header(),
+          Container(
+            child: ListViewItems(),
+            height: 350,
+          ),
+          Bottom(),
+          Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height * 0.07,
+                width: MediaQuery.of(context).size.width * 0.9,
+                child: TextButton(
+                  onPressed: () => addOrder(),
+                  child: Text(
+                    "Proslijedi",
+                    style: Styles.yellowButtonText,
+                  ),
+                  style: Styles.yellowButton,
                 ),
-                style: Styles.yellowButton,
               ),
-            ),
-          ],
-        ),
-      ],
+            ],
+          ),
+        ],
+      ),
     ),
   );
 }

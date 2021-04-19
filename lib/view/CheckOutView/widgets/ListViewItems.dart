@@ -12,6 +12,7 @@ class _ListViewItemsState extends State<ListViewItems> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 100,
       decoration: Styles.border,
       child: ListView.separated(
         itemCount: naziv.length,
