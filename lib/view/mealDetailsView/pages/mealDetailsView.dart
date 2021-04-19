@@ -4,6 +4,7 @@ import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/widgets/listViewMeal.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/widgets/mealImage.dart';
+import 'package:cool_alert/cool_alert.dart';
 
 class MealDetails extends StatefulWidget {
   final document;
@@ -52,6 +53,12 @@ class _MealDetailsState extends State<MealDetails> {
                 child: TextButton(
                   onPressed: () {
                     AddMeal().addMeal(indexRadio, widget.document);
+                    CoolAlert.show(
+                      context: context,
+                      title: "Čestitamo!",
+                      type: CoolAlertType.success,
+                      text: "Uspješno ste dodali jelo u korpu",
+                    );
                   },
                   child: Text(
                     "Dodaj",
