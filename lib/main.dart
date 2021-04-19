@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:zeljoprojekat/view/MenuScreen/pages/menu_screen.dart';
-=======
+import 'package:firebase_core/firebase_core.dart';
 import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
->>>>>>> main
 
 void main() {
   runApp(MyApp());
@@ -12,7 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return FutureBuilder(
       // Initialize FlutterFire
       future: Firebase.initializeApp(),
@@ -29,7 +26,7 @@ class MyApp extends StatelessWidget {
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: MenuScreen(),
+            home: SignInScreen(),
           );
         }
 
@@ -40,16 +37,6 @@ class MyApp extends StatelessWidget {
 
         // Otherwise, show something whilst waiting for initialization to complete
       },
-=======
-    return MaterialApp(
-      title: 'Željo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        brightness: Brightness.dark,
-      ),
-      home: SignInScreen(),
->>>>>>> main
     );
   }
 }
