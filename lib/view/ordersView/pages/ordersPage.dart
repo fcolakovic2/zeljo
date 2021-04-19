@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:zeljoprojekat/view/ordersView/widgets/TextCard.dart';
@@ -48,6 +49,8 @@ class _OrderPageState extends State<OrderPage> {
       super.initState();
     }
 */
+    User userTrenutni = FirebaseAuth.instance.currentUser;
+
     return Scaffold(
         appBar: AppBar(
           shadowColor: Colors.white,
@@ -58,7 +61,10 @@ class _OrderPageState extends State<OrderPage> {
         ),
         backgroundColor: Colors.white,
         body: StreamBuilder(
-            stream: FirebaseFirestore.instance.collection('orders').snapshots(),
+            stream: FirebaseFirestore.instance
+                .collection('orders')
+                .where("email", isEqualTo: userTrenutni.email)
+                .snapshots(),
             builder:
                 (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
               if (!snapshot.hasData) {
