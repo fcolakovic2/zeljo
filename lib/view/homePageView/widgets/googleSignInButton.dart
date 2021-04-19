@@ -30,6 +30,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                   _isSigningIn = true;
                 });
                 User user = await signInWithGoogle(context);
+
                 setState(() {
                   _isSigningIn = false;
                 });
