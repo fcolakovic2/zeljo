@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zeljoprojekat/services/addMeal.dart';
+import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 
 class ListViewMeal extends StatefulWidget {
   final document;
@@ -36,6 +38,8 @@ class _ListViewMealState extends State<ListViewMeal> {
                           setState(() {
                             pozicija = index;
                           });
+                          // AddMeal().addMeal(index, widget.document);
+                          indexRadio = index;
                         },
                       ),
                       Text(porcije[index]),

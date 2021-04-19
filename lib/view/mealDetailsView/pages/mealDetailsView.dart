@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zeljoprojekat/services/addMeal.dart';
+import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/shared/sizeConfig.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/widgets/listViewMeal.dart';
@@ -49,7 +51,9 @@ class _MealDetailsState extends State<MealDetails> {
               Container(
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    AddMeal().addMeal(indexRadio, widget.document);
+                  },
                   child: Text(
                     "Dodaj",
                     style: Styles.yellowButtonText,

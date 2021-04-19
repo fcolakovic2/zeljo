@@ -1,4 +1,5 @@
-List<String> naziv = <String>['Pljeskavica', 'Cevapi', 'Pomfrit'];
-List<String> prilog = <String>['Luk, kajmak', 'Luk', 'Kecap'];
-List<String> cijena = <String>['3', '5', '2.5'];
+List<String> naziv = <String>[];
+List<String> velicina = <String>[];
+List<String> cijena = <String>[];
 String ukupnaCijena = "";
+int indexRadio;
