@@ -77,7 +77,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.location_pin),
-            label: 'Naruči sad',
+            label: 'Narudžbe',
           ),
         ],
         currentIndex: _selectedIndex,
