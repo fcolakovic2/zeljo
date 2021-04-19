@@ -22,7 +22,8 @@ class _MenuCardState extends State<MenuCard> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MealDetails()),
+            MaterialPageRoute(
+                builder: (context) => MealDetails(widget.document)),
           );
         },
         child: Card(

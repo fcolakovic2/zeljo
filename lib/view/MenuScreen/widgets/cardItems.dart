@@ -35,14 +35,16 @@ Widget cardItems(BuildContext context, DocumentSnapshot document) {
         ],
       ),
       Padding(
-          padding: const EdgeInsets.only(right: 10),
-          child: Container(
-              width: SizeConfig.blockSizeHorizontal * 33,
-              height: SizeConfig.blockSizeVertical * 33,
-              child: Image.network(
-                document['image_url'],
-                fit: BoxFit.fitWidth,
-              ))),
+        padding: const EdgeInsets.only(right: 10),
+        child: Container(
+          width: SizeConfig.blockSizeHorizontal * 33,
+          height: SizeConfig.blockSizeVertical * 33,
+          child: Image.network(
+            document['image_url'],
+            fit: BoxFit.fitWidth,
+          ),
+        ),
+      ),
     ],
   );
 }

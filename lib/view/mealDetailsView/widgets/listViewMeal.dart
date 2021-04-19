@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ListViewMeal extends StatefulWidget {
+  final document;
+  ListViewMeal(this.document);
   @override
   _ListViewMealState createState() => _ListViewMealState();
 }
@@ -39,7 +41,18 @@ class _ListViewMealState extends State<ListViewMeal> {
                       Text(porcije[index]),
                     ],
                   ),
-                  Text("12 KM"),
+                  if (index == 0)
+                    Text(
+                      widget.document['mala_porcija'],
+                    ),
+                  if (index == 1)
+                    Text(
+                      widget.document['srednja_porcija'],
+                    ),
+                  if (index == 2)
+                    Text(
+                      widget.document['velika_porcija'],
+                    ),
                 ],
               ),
             ),

@@ -5,6 +5,8 @@ import 'package:zeljoprojekat/view/mealDetailsView/widgets/listViewMeal.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/widgets/mealImage.dart';
 
 class MealDetails extends StatefulWidget {
+  final document;
+  MealDetails(this.document);
   @override
   _MealDetailsState createState() => _MealDetailsState();
 }
@@ -25,7 +27,7 @@ class _MealDetailsState extends State<MealDetails> {
           SafeArea(
             child: Stack(
               children: [
-                MealImage(),
+                MealImage(widget.document),
                 TextButton(
                   onPressed: () {
                     Navigator.pop(context);
@@ -39,7 +41,7 @@ class _MealDetailsState extends State<MealDetails> {
               ],
             ),
           ),
-          ListViewMeal(),
+          ListViewMeal(widget.document),
           Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
