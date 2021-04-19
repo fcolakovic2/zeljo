@@ -2,6 +2,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+String convertDateTimeDisplay(String date) {
+  final DateFormat displayFormater = DateFormat('yyyy-MM-dd HH:mm:ss.SSS');
+  final DateFormat serverFormater = DateFormat('dd-MM-yyyy');
+  final DateTime displayDate = displayFormater.parse(date);
+  final String formatted = serverFormater.format(displayDate);
+  return formatted;
+}
+
 class OrderPage extends StatefulWidget {
   @override
   _OrderPageState createState() => _OrderPageState();
@@ -44,7 +52,8 @@ class _OrderPageState extends State<OrderPage> {
                           child: Row(
                             children: [
                               Text(status[index]),
-                              Text(datumi[index].toDate().toString()),
+                              Text(convertDateTimeDisplay(
+                                  datumi[index].toDate().toString())),
                             ],
                           ),
                         ),
