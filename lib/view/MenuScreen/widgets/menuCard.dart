@@ -17,7 +17,7 @@ class _MenuCardState extends State<MenuCard> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Container(
-      height: SizeConfig.blockSizeVertical * 20,
+      height: 114,
       child: GestureDetector(
         onTap: () {
           Navigator.push(

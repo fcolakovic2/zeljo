@@ -1,12 +1,12 @@
 # This is a generated file; do not edit or check into version control.
-cloud_firestore=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-1.0.5/
-cloud_firestore_web=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-1.0.5/
-firebase_analytics=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-8.0.0/
-firebase_analytics_web=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics_web-0.3.0/
-firebase_auth=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-1.1.0/
-firebase_auth_web=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-1.0.6/
-firebase_core=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.0.3/
-firebase_core_web=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.0.2/
-flutter_local_notifications=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.8.4+3/
-google_sign_in=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-5.0.2/
-google_sign_in_web=/Users/fariscolakovic/developer/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.10.0/
+cloud_firestore=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\cloud_firestore-1.0.5\\
+cloud_firestore_web=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\cloud_firestore_web-1.0.5\\
+firebase_analytics=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\firebase_analytics-8.0.0\\
+firebase_analytics_web=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\firebase_analytics_web-0.3.0\\
+firebase_auth=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\firebase_auth-1.1.0\\
+firebase_auth_web=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\firebase_auth_web-1.0.6\\
+firebase_core=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\firebase_core-1.0.3\\
+firebase_core_web=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\firebase_core_web-1.0.2\\
+flutter_local_notifications=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\flutter_local_notifications-0.8.4+3\\
+google_sign_in=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\google_sign_in-5.0.2\\
+google_sign_in_web=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\google_sign_in_web-0.10.0\\
