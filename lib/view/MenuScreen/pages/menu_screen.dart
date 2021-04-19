@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/MenuScreen/widgets/appBarText.dart';
 import 'package:zeljoprojekat/view/MenuScreen/widgets/menuCard.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class MenuScreen extends StatefulWidget {
   @override
@@ -18,23 +19,20 @@ class _MenuScreenState extends State<MenuScreen> {
         title: appBarText(),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          color: Colors.grey[50],
-          child: Column(
-            children: [
-              MenuCard(),
-              MenuCard(),
-              MenuCard(),
-              MenuCard(),
-              MenuCard(),
-              MenuCard(),
-              MenuCard(),
-              MenuCard(),
-            ],
-          ),
-        ),
+      body: StreamBuilder(
+        stream: FirebaseFirestore.instance.collection('meals').snapshots(),
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) return const Text('Loading meals...');
+          return ListView.builder(
+            itemExtent: 80.0,
+            itemCount: snapshot.data.docs.length,
+            itemBuilder: (context, index) =>
+                MenuCard(context, snapshot.data.docs[index]),
+          );
+        },
       ),
     );
   }
 }
+
+mixin Firestore {}

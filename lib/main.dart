@@ -13,9 +13,26 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MenuScreen(),
+    return FutureBuilder(
+      // Initialize FlutterFire
+      future: Firebase.initializeApp(),
+      builder: (context, snapshot) {
+        // Check for errors
+        if (snapshot.hasError) {
+          return Text('Error');
+        }
+
+        // Once complete, show your application
+        if (snapshot.connectionState == ConnectionState.done) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: MenuScreen(),
+          );
+          ;
+        }
+
+        // Otherwise, show something whilst waiting for initialization to complete
+      },
     );
   }
 }
