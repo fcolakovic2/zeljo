@@ -17,7 +17,7 @@ class Order {
         .add({
           'orderStatus': "onPending",
           'created': Timestamp.now(),
-          'price': cijena[1],
+          'price': ukupnaCijena,
           'email': userTrenutnii.email,
         })
         .then((value) => print("Order added"))
