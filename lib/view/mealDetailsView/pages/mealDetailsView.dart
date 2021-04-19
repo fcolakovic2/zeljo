@@ -27,7 +27,9 @@ class _MealDetailsState extends State<MealDetails> {
               children: [
                 MealImage(),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   child: Icon(
                     Icons.chevron_left,
                     size: 26,
@@ -45,7 +47,7 @@ class _MealDetailsState extends State<MealDetails> {
               Container(
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: TextButton(
-                  onPressed: () => {},
+                  onPressed: () {},
                   child: Text(
                     "Dodaj",
                     style: Styles.yellowButtonText,
