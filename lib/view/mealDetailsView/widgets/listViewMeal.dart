@@ -9,12 +9,13 @@ List porcije = ["Mala porcija", "Srednja porcija", "Velika porcija"];
 
 class _ListViewMealState extends State<ListViewMeal> {
   String _porcija = porcije[0];
+  int pozicija = 0;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.3,
-      child: ListView.separated(
+      child: ListView.builder(
         itemCount: porcije.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
@@ -44,7 +45,7 @@ class _ListViewMealState extends State<ListViewMeal> {
             ),
           );
         },
-        separatorBuilder: (BuildContext context, int index) => const Divider(),
+        // separatorBuilder: (BuildContext context, int index) => const Divider(),
       ),
     );
   }
