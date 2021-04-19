@@ -10,6 +10,12 @@ class ListViewItems extends StatefulWidget {
 
 class _ListViewItemsState extends State<ListViewItems> {
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.2,
@@ -26,7 +32,7 @@ class _ListViewItemsState extends State<ListViewItems> {
             onDismissed: (_) {
               setState(() {
                 naziv.removeAt(index);
-                prilog.removeAt(index);
+                velicina.removeAt(index);
                 cijena.removeAt(index);
                 changePrice();
               });
@@ -59,7 +65,7 @@ class _ListViewItemsState extends State<ListViewItems> {
                           style: Styles.boldText,
                         ),
                         Text(
-                          prilog[index],
+                          velicina[index],
                           style: Styles.prilog,
                         ),
                       ],
@@ -77,7 +83,7 @@ class _ListViewItemsState extends State<ListViewItems> {
                         onPressed: () {
                           setState(() {
                             naziv.removeAt(index);
-                            prilog.removeAt(index);
+                            velicina.removeAt(index);
                             cijena.removeAt(index);
                             changePrice();
                           });
