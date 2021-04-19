@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:zeljoprojekat/services/Order.dart';
-import 'package:zeljoprojekat/view/CheckOutView/pages/CheckOutScreen.dart';
+import 'package:zeljoprojekat/view/CheckOutView/pages/checkOutScreen.dart';
 
 class Notifications {
   var context;
