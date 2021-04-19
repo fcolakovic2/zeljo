@@ -16,7 +16,13 @@ class _TextCardState extends State<TextCard> {
     return Card(
       color: Colors.white,
       shape: RoundedRectangleBorder(
-        side: BorderSide(color: Colors.blue, width: 1),
+        side: BorderSide(
+            color: widget.document['orderStatus'] == "accepted"
+                ? Colors.green
+                : widget.document['orderStatus'] == "declined"
+                    ? Colors.red
+                    : Colors.black,
+            width: 1),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Padding(
