@@ -19,7 +19,10 @@ class MyApp extends StatelessWidget {
       builder: (context, snapshot) {
         // Check for errors
         if (snapshot.hasError) {
-          return Text('Error');
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: Text('Error'),
+          );
         }
 
         // Once complete, show your application
@@ -28,8 +31,12 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             home: MenuScreen(),
           );
-          ;
         }
+
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: Text('Loading...'),
+        );
 
         // Otherwise, show something whilst waiting for initialization to complete
       },

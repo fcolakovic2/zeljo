@@ -24,7 +24,7 @@ class _MenuScreenState extends State<MenuScreen> {
         builder: (context, snapshot) {
           if (!snapshot.hasData) return const Text('Loading meals...');
           return ListView.builder(
-            itemExtent: 80.0,
+            //itemExtent: 80.0,
             itemCount: snapshot.data.docs.length,
             itemBuilder: (context, index) =>
                 MenuCard(context, snapshot.data.docs[index]),
