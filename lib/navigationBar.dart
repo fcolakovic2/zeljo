@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/view/CheckOutView/pages/CheckOutScreen.dart';
+import 'package:zeljoprojekat/view/CheckOutView/pages/checkOutScreen.dart';
+import 'package:zeljoprojekat/view/MenuScreen/pages/menu_screen.dart';
+import 'package:zeljoprojekat/view/mealDetailsView/pages/mealDetailsView.dart';
 import 'package:zeljoprojekat/view/ordersView/pages/ordersPage.dart';
 
 void main() => runApp(const MyApp());
@@ -35,10 +37,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       'Index 0: Korpa',
       style: optionStyle,
     ),
-    Text(
-      'Index 1: Restorani',
-      style: optionStyle,
-    ),
+    MenuScreen(),
     CheckOutScreen(),
     OrderPage(),
   ];
@@ -60,24 +59,36 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         backgroundColor: Colors.white,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              color: Colors.grey,
+            ),
             label: 'Korpa',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag),
+            icon: Icon(
+              Icons.shopping_bag,
+              color: Colors.grey,
+            ),
             label: 'Restorani',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Colors.grey,
+            ),
             label: 'Naruči sad',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.location_pin),
+            icon: Icon(
+              Icons.location_pin,
+              color: Colors.grey,
+            ),
             label: 'Narudžbe',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.grey,
         onTap: _onItemTapped,
       ),
     );

@@ -1,41 +1,38 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:zeljoprojekat/navigationBar.dart';
 import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
+import 'package:zeljoprojekat/view/MenuScreen/pages/menu_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: Firebase.initializeApp(),
-      builder: (context, snapshot) {
-        if (snapshot.hasError) {
-          return MaterialApp(
-            title: 'Željo',
-            home: Text("greska"),
-          );
-        }
+    return MaterialApp(
+      title: 'Željo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.amber,
+      ),
+      home: FutureBuilder(
+        builder: (context, snapshot) {
+          // Future<User> user = signInWithGoogle(context);
+          User firebaseUser = FirebaseAuth.instance.currentUser;
 
-        if (snapshot.connectionState == ConnectionState.done) {
-          return MaterialApp(
-            title: 'Željo',
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              primarySwatch: Colors.indigo,
-              brightness: Brightness.dark,
-            ),
-            home: SignInScreen(),
-          );
-        }
-
-        return MaterialApp(
-          title: 'Željo',
-          home: Text("loading"),
-        );
-      },
+          // Assign widget based on availability of currentUser
+          if (firebaseUser != null) {
+            return MyStatefulWidget();
+          } else {
+            return SignInScreen();
+          }
+        },
+      ),
     );
   }
 }
