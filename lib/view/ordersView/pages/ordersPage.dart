@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:zeljoprojekat/view/ordersView/widgets/TextCard.dart';
@@ -22,54 +23,35 @@ class _OrderPageState extends State<OrderPage> {
 
   @override
   Widget build(BuildContext context) {
-    /*  Future.delayed(const Duration(milliseconds: 1), () {
-      setState(() {});
-    });*/
+    User userTrenutni = FirebaseAuth.instance.currentUser;
 
-    /*  List<Timestamp> datumi = [];
-    List<String> status = [];
-
-    orders.snapshots().forEach((element) {
-      element.docs.forEach((element2) {
-        datumi.add(element2.get('created'));
-      });
-    });
-
-    orders.snapshots().forEach((element) {
-      element.docs.forEach((element2) {
-        status.add(element2.get('orderStatus'));
-      });
-    });
-
-    @override
-    void initState() {
-      datumi.clear();
-      status.clear();
-      super.initState();
-    }
-*/
     return Scaffold(
-        appBar: AppBar(
-          shadowColor: Colors.white,
-          toolbarHeight: 80,
-          backgroundColor: Colors.white,
-          title: appBarText(),
-          centerTitle: true,
-        ),
+      appBar: AppBar(
+        shadowColor: Colors.white,
+        toolbarHeight: 80,
         backgroundColor: Colors.white,
-        body: StreamBuilder(
-            stream: FirebaseFirestore.instance.collection('orders').snapshots(),
-            builder:
-                (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-              if (!snapshot.hasData) {
-                return Center(child: CircularProgressIndicator());
-              }
+        title: appBarText(),
+        centerTitle: true,
+      ),
+      backgroundColor: Colors.white,
+      body: StreamBuilder(
+        stream: FirebaseFirestore.instance
+            .collection('orders')
+            .where("email", isEqualTo: userTrenutni.email)
+            .orderBy('created', descending: true)
+            .snapshots(),
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (!snapshot.hasData) {
+            return Center(child: CircularProgressIndicator());
+          }
 
-              return ListView.builder(
-                  itemCount: snapshot.data.docs.length,
-                  itemBuilder: (context, index) {
-                    return TextCard(context, snapshot.data.docs[index]);
-                  });
-            }));
+          return ListView.builder(
+              itemCount: snapshot.data.docs.length,
+              itemBuilder: (context, index) {
+                return TextCard(context, snapshot.data.docs[index]);
+              });
+        },
+      ),
+    );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/utils/shared/sizeConfig.dart';
+import 'package:zeljoprojekat/utils/shared/size_config.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/homePageView/widgets/googleLogo.dart';
 import 'package:zeljoprojekat/view/homePageView/widgets/googleTekst.dart';
@@ -30,6 +30,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                   _isSigningIn = true;
                 });
                 User user = await signInWithGoogle(context);
+
                 setState(() {
                   _isSigningIn = false;
                 });
