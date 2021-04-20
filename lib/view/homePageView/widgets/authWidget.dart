@@ -13,14 +13,8 @@ class AuthWidget extends StatelessWidget {
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Text('Error prilikom authenticationa');
-        } else if (snapshot.connectionState == ConnectionState.done) {
-          return GoogleSignInButton();
         }
-        return CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(
-            Colors.orange,
-          ),
-        );
+        return GoogleSignInButton();
       },
     );
   }

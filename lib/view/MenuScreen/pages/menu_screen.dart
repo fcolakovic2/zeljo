@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/MenuScreen/widgets/appBarText.dart';
 import 'package:zeljoprojekat/view/MenuScreen/widgets/menuCard.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
-import '../../../viewModel/signInViewModel.dart';
+import 'package:zeljoprojekat/view/menuScreen/widgets/signOut.dart';
 
 class MenuScreen extends StatefulWidget {
   @override

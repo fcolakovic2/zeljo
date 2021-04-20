@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:zeljoprojekat/navigationBar.dart';
 import 'package:zeljoprojekat/view/Restaurants/pages/restaurant_screen.dart';
 import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
@@ -25,11 +26,9 @@ class MyApp extends StatelessWidget {
       ),
       home: FutureBuilder(
         builder: (context, snapshot) {
-          // Future<User> user = signInWithGoogle(context);
-          User firebaseUser = FirebaseAuth.instance.currentUser;
-
+          GoogleSignIn _googleSignIn = GoogleSignIn();
           // Assign widget based on availability of currentUser
-          if (firebaseUser != null) {
+          if (_googleSignIn.clientId != null) {
             return MyStatefulWidget();
           } else {
             return SignInScreen();
