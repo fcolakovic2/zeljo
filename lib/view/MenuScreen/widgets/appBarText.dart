@@ -4,7 +4,7 @@ import '../../../utils/style/style.dart';
 
 Widget appBarText() {
   return Text(
-    'Naruci sad',
+    'Naruči sad',
     style: Styles.headerBasket,
   );
 }
