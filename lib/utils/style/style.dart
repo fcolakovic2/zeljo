@@ -24,8 +24,9 @@ class Styles {
       TextStyle(color: Colors.grey, letterSpacing: 0.2);
 
   static final TextStyle headerBasket = TextStyle(
-    fontSize: 25,
-    color: Colors.blue[800],
+    fontSize: 23,
+    color: Colors.blue[900],
+    letterSpacing: 2.5,
   );
 
   static final TextStyle prilog = TextStyle(
