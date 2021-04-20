@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/view/CheckOutView/pages/CheckOutScreen.dart';
+import 'package:zeljoprojekat/view/CheckOutView/pages/checkOutScreen.dart';
+import 'package:zeljoprojekat/view/MenuScreen/pages/menu_screen.dart';
+import 'package:zeljoprojekat/view/MenuScreen/widgets/menuCard.dart';
+import 'package:zeljoprojekat/view/Restaurants/pages/restaurant_screen.dart';
+import 'package:zeljoprojekat/view/mealDetailsView/pages/mealDetailsView.dart';
+import 'package:zeljoprojekat/view/ordersView/pages/ordersPage.dart';
 
 void main() => runApp(const MyApp());
 
@@ -30,19 +35,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Korpa',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Restorani',
-      style: optionStyle,
-    ),
+    MenuScreen(),
+    Restaurants(),
     CheckOutScreen(),
-    Text(
-      'Index 3: Narudžbe',
-      style: optionStyle,
-    ),
+    OrderPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -54,34 +50,44 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Korpa',
+            icon: Icon(
+              Icons.home,
+              color: Colors.grey,
+            ),
+            label: 'Naruči sad',
           ),
           BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/images/ikonicaStar.png',
-              width: 24.0,
-              height: 24.0,
+            icon: Icon(
+              Icons.shopping_bag,
+              color: Colors.grey,
             ),
             label: 'Restorani',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Naruči sad',
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Colors.grey,
+            ),
+            label: 'Korpa',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.location_pin),
-            label: 'Naruči sad',
+            icon: Icon(
+              Icons.location_pin,
+              color: Colors.grey,
+            ),
+            label: 'Narudžbe',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.grey,
         onTap: _onItemTapped,
       ),
     );

@@ -1,42 +1,38 @@
-import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/view/MenuScreen/pages/menu_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:zeljoprojekat/navigationBar.dart';
+import 'package:zeljoprojekat/view/Restaurants/pages/restaurant_screen.dart';
 import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      // Initialize FlutterFire
-      future: Firebase.initializeApp(),
-      builder: (context, snapshot) {
-        // Check for errors
-        if (snapshot.hasError) {
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            home: Text('Error'),
-          );
-        }
+    return MaterialApp(
+      title: 'Željo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.amber,
+      ),
+      home: FutureBuilder(
+        builder: (context, snapshot) {
+          // Future<User> user = signInWithGoogle(context);
+          User firebaseUser = FirebaseAuth.instance.currentUser;
 
-        // Once complete, show your application
-        if (snapshot.connectionState == ConnectionState.done) {
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            home: SignInScreen(),
-          );
-        }
-
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: Text('Loading...'),
-        );
-
-        // Otherwise, show something whilst waiting for initialization to complete
-      },
+          // Assign widget based on availability of currentUser
+          if (firebaseUser != null) {
+            return MyStatefulWidget();
+          } else {
+            return SignInScreen();
+          }
+        },
+      ),
     );
   }
 }

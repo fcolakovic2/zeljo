@@ -59,10 +59,14 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    - assets/images/
     - assets/images/login_background.png
     - assets/images/zeljoLogo.png
     - assets/images/google_logo.png
     - assets/images/ikonicaStar.png 
+    - assets/images/zeljo_1.png
+    - assets/images/zeljo_2.png
+    - assets/images/zeljo_3.png
     
   #   - images/a_dot_ham.jpeg
 
