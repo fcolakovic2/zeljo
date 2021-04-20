@@ -3,6 +3,8 @@ import 'package:zeljoprojekat/view/MenuScreen/widgets/appBarText.dart';
 import 'package:zeljoprojekat/view/MenuScreen/widgets/menuCard.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import '../../../viewModel/signInViewModel.dart';
+
 class MenuScreen extends StatefulWidget {
   @override
   _MenuScreenState createState() => _MenuScreenState();
@@ -16,6 +18,7 @@ class _MenuScreenState extends State<MenuScreen> {
         shadowColor: Colors.white,
         toolbarHeight: 80,
         backgroundColor: Colors.white,
+        actions: <Widget>[signOut(context)],
         title: appBarText(),
         centerTitle: true,
       ),
