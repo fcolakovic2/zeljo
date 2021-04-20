@@ -7,10 +7,6 @@ import 'package:zeljoprojekat/view/CheckOutView/widgets/Header.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/ListViewItems.dart';
 import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
-import 'ListViewItems.dart';
-import 'ListViewItems.dart';
-import 'ListViewItems.dart';
-
 Widget mainBody(context) {
   return Scaffold(
     backgroundColor: Colors.white,
