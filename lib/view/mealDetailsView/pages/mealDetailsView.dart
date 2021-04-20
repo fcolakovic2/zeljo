@@ -16,7 +16,6 @@ class MealDetails extends StatefulWidget {
 class _MealDetailsState extends State<MealDetails> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 

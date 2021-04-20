@@ -13,7 +13,6 @@ class ListViewItems extends StatefulWidget {
 class _ListViewItemsState extends State<ListViewItems> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
