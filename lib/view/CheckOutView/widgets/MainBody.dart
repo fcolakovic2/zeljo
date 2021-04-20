@@ -14,7 +14,7 @@ Widget mainBody(context) {
       height: MediaQuery.of(context).size.height,
       child: Column(
         children: [
-          header(),
+          // header(),
           Container(
             child: ListViewItems(),
             height: 350,

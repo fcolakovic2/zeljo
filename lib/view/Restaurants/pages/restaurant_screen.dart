@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/Restaurants/widgets/RestaurantCard.dart';
 
+import '../../../utils/style/style.dart';
+
 class Restaurants extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,11 +15,7 @@ class Restaurants extends StatelessWidget {
         backgroundColor: Colors.white,
         title: Text(
           'Restorani',
-          style: TextStyle(
-            fontSize: 23,
-            color: Colors.blue[900],
-            letterSpacing: 2.5,
-          ),
+          style: Styles.headerBasket,
         ),
       ),
       body: StreamBuilder(
