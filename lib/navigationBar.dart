@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/CheckOutView/pages/checkOutScreen.dart';
 import 'package:zeljoprojekat/view/MenuScreen/pages/menu_screen.dart';
+import 'package:zeljoprojekat/view/MenuScreen/widgets/menuCard.dart';
+import 'package:zeljoprojekat/view/Restaurants/pages/restaurant_screen.dart';
+import 'package:zeljoprojekat/view/mealDetailsView/pages/mealDetailsView.dart';
 import 'package:zeljoprojekat/view/ordersView/pages/ordersPage.dart';
 
 void main() => runApp(const MyApp());
@@ -32,11 +35,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Korpa',
-      style: optionStyle,
-    ),
     MenuScreen(),
+    Restaurants(),
     CheckOutScreen(),
     OrderPage(),
   ];
@@ -62,7 +62,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               Icons.home,
               color: Colors.grey,
             ),
-            label: 'Korpa',
+            label: 'Naruči sad',
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -76,7 +76,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               Icons.shopping_cart,
               color: Colors.grey,
             ),
-            label: 'Naruči sad',
+            label: 'Korpa',
           ),
           BottomNavigationBarItem(
             icon: Icon(
