@@ -4,6 +4,8 @@ import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
 class ListViewItems extends StatefulWidget {
+  _ListViewItemsState myListState = new _ListViewItemsState();
+
   @override
   _ListViewItemsState createState() => _ListViewItemsState();
 }
@@ -17,6 +19,9 @@ class _ListViewItemsState extends State<ListViewItems> {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(milliseconds: 1), () {
+      setState(() {});
+    });
     return Container(
       height: MediaQuery.of(context).size.height * 0.2,
       decoration: Styles.border,

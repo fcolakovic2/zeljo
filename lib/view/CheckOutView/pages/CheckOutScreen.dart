@@ -10,7 +10,6 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
   @override
   void initState() {
     super.initState();
-    // orderStatusNotification(context);
   }
 
   @override
