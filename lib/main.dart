@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/navigationBar.dart';
 import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
-import 'package:zeljoprojekat/view/MenuScreen/pages/menu_screen.dart';
+import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,6 +14,8 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    orderStatusNotification(context);
+
     return MaterialApp(
       title: 'Željo',
       debugShowCheckedModeBanner: false,

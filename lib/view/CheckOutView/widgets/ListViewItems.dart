@@ -4,13 +4,23 @@ import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
 class ListViewItems extends StatefulWidget {
+  _ListViewItemsState myListState = new _ListViewItemsState();
+
   @override
   _ListViewItemsState createState() => _ListViewItemsState();
 }
 
 class _ListViewItemsState extends State<ListViewItems> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(milliseconds: 1), () {
+      setState(() {});
+    });
     return Container(
       height: MediaQuery.of(context).size.height * 0.2,
       decoration: Styles.border,
@@ -26,7 +36,7 @@ class _ListViewItemsState extends State<ListViewItems> {
             onDismissed: (_) {
               setState(() {
                 naziv.removeAt(index);
-                prilog.removeAt(index);
+                velicina.removeAt(index);
                 cijena.removeAt(index);
                 changePrice();
               });
@@ -59,7 +69,7 @@ class _ListViewItemsState extends State<ListViewItems> {
                           style: Styles.boldText,
                         ),
                         Text(
-                          prilog[index],
+                          velicina[index],
                           style: Styles.prilog,
                         ),
                       ],
@@ -77,7 +87,7 @@ class _ListViewItemsState extends State<ListViewItems> {
                         onPressed: () {
                           setState(() {
                             naziv.removeAt(index);
-                            prilog.removeAt(index);
+                            velicina.removeAt(index);
                             cijena.removeAt(index);
                             changePrice();
                           });

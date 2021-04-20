@@ -1,6 +1,6 @@
-import 'package:zeljoprojekat/services/ChangePrice.dart';
-import 'package:zeljoprojekat/services/Notifications.dart';
-import 'package:zeljoprojekat/services/Order.dart';
+import 'package:zeljoprojekat/services/changePrice.dart';
+import 'package:zeljoprojekat/services/notifications.dart';
+import 'package:zeljoprojekat/services/order.dart';
 
 addOrder() {
   return Order().addOrder();
