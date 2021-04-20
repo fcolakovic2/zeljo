@@ -18,9 +18,6 @@ class _ListViewItemsState extends State<ListViewItems> {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(milliseconds: 1), () {
-      setState(() {});
-    });
     return Container(
       height: MediaQuery.of(context).size.height * 0.2,
       decoration: Styles.border,
