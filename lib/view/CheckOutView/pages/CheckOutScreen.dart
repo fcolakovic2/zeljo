@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/MainBody.dart';
-import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
 class CheckOutScreen extends StatefulWidget {
   @override

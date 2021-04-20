@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zeljoprojekat/services/addMeal.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 
 class ListViewMeal extends StatefulWidget {
