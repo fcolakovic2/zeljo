@@ -1,4 +1,5 @@
 # This is a generated file; do not edit or check into version control.
+<<<<<<< HEAD
 cloud_firestore=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\cloud_firestore-1.0.5\\
 cloud_firestore_web=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\cloud_firestore_web-1.0.5\\
 firebase_analytics=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\firebase_analytics-8.0.0\\
@@ -10,3 +11,30 @@ firebase_core_web=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlan
 flutter_local_notifications=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\flutter_local_notifications-0.8.4+3\\
 google_sign_in=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\google_sign_in-5.0.2\\
 google_sign_in_web=C:\\Users\\Hp\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dartlang.org\\google_sign_in_web-0.10.0\\
+=======
+<<<<<<< HEAD
+cloud_firestore=C:\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore-1.0.6\\
+cloud_firestore_web=C:\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore_web-1.0.6\\
+firebase_analytics=C:\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_analytics-8.0.1\\
+firebase_analytics_web=C:\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_analytics_web-0.3.0\\
+firebase_auth=C:\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth-1.1.1\\
+firebase_auth_web=C:\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth_web-1.0.7\\
+firebase_core=C:\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core-1.0.4\\
+firebase_core_web=C:\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core_web-1.0.2\\
+flutter_local_notifications=C:\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_local_notifications-0.8.4+3\\
+google_sign_in=C:\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\google_sign_in-5.0.2\\
+google_sign_in_web=C:\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\google_sign_in_web-0.10.0\\
+=======
+cloud_firestore=/Users/ilhanlicina/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-1.0.6/
+cloud_firestore_web=/Users/ilhanlicina/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-1.0.6/
+firebase_analytics=/Users/ilhanlicina/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-8.0.1/
+firebase_analytics_web=/Users/ilhanlicina/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics_web-0.3.0/
+firebase_auth=/Users/ilhanlicina/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-1.1.1/
+firebase_auth_web=/Users/ilhanlicina/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-1.0.7/
+firebase_core=/Users/ilhanlicina/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.0.4/
+firebase_core_web=/Users/ilhanlicina/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.0.2/
+flutter_local_notifications=/Users/ilhanlicina/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.8.4+3/
+google_sign_in=/Users/ilhanlicina/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-5.0.2/
+google_sign_in_web=/Users/ilhanlicina/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.10.0/
+>>>>>>> ilhan
+>>>>>>> amer
