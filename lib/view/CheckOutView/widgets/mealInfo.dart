@@ -18,11 +18,11 @@ class _MealInfoState extends State<MealInfo> {
       children: [
         Text(
           naziv[widget.index],
-          style: Styles.boldText,
+          style: boldText,
         ),
         Text(
           velicina[widget.index],
-          style: Styles.prilog,
+          style: prilog,
         ),
       ],
     );

@@ -6,7 +6,7 @@ Widget header() {
     child: Column(
       children: [
         Container(
-          decoration: Styles.border,
+          decoration: border,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -14,7 +14,7 @@ Widget header() {
                 padding: const EdgeInsets.all(25.0),
                 child: Text(
                   'Korpa',
-                  style: Styles.headerBasket,
+                  style: headerBasket,
                 ),
               ),
             ],

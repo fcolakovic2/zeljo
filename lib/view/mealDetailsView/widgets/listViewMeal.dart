@@ -58,7 +58,6 @@ class _ListViewMealState extends State<ListViewMeal> {
             ),
           );
         },
-        // separatorBuilder: (BuildContext context, int index) => const Divider(),
       ),
     );
   }

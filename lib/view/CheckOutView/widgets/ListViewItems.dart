@@ -17,7 +17,7 @@ class _ListViewItemsState extends State<ListViewItems> {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.2,
-      decoration: Styles.border,
+      decoration: border,
       child: ListView.separated(
         itemCount: naziv.length,
         itemBuilder: (BuildContext context, int index) {

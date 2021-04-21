@@ -22,7 +22,7 @@ class _BottomState extends State<Bottom> {
     });
 
     return Container(
-      decoration: Styles.border,
+      decoration: border,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20, 20, 20, 50),
         child: Row(
@@ -34,11 +34,11 @@ class _BottomState extends State<Bottom> {
               children: [
                 Text(
                   "Total narudžbe",
-                  style: Styles.boldBigText,
+                  style: boldBigText,
                 ),
                 Text(
                   ukupnaCijena,
-                  style: Styles.boldBigText,
+                  style: boldBigText,
                 ),
               ],
             ),

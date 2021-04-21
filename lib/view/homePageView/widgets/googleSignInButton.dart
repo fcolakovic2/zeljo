@@ -24,7 +24,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
             )
           : OutlinedButton(
-              style: Styles.stilDugmeta,
+              style: stilDugmeta,
               onPressed: () async {
                 setState(() {
                   _isSigningIn = true;

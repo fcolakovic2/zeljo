@@ -5,6 +5,6 @@ import '../../../utils/style/style.dart';
 Widget appBarText() {
   return Text(
     'Naruči sad',
-    style: Styles.headerBasket,
+    style: headerBasket,
   );
 }

@@ -15,7 +15,7 @@ class Restaurants extends StatelessWidget {
         backgroundColor: Colors.white,
         title: Text(
           'Restorani',
-          style: Styles.headerBasket,
+          style: headerBasket,
         ),
       ),
       body: StreamBuilder(

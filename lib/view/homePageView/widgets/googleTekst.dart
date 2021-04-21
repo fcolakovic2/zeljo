@@ -13,7 +13,7 @@ class GoogleTekst extends StatelessWidget {
       child: Text(
         'Sign in with Google',
         textAlign: TextAlign.left,
-        style: Styles.naslovStyle,
+        style: naslovStyle,
       ),
     );
   }

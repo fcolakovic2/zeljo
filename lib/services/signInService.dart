@@ -22,7 +22,7 @@ class SignInService implements SignInInterface {
       backgroundColor: Colors.black,
       content: Text(
         content,
-        style: Styles.stilUsera,
+        style: stilUsera,
       ),
     );
   }

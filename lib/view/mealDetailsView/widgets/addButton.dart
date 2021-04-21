@@ -29,9 +29,9 @@ class _AddButtonState extends State<AddButton> {
         },
         child: Text(
           "Dodaj",
-          style: Styles.yellowButtonText,
+          style: yellowButtonText,
         ),
-        style: Styles.yellowButton,
+        style: yellowButton,
       ),
     );
   }

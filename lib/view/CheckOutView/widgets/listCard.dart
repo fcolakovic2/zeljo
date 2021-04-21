@@ -31,7 +31,7 @@ class _ListCardState extends State<ListCard> {
               children: [
                 Text(
                   cijena[widget.index] + " KM",
-                  style: Styles.boldText,
+                  style: boldText,
                 ),
                 TextButton(
                   onPressed: () {

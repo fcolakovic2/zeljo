@@ -47,9 +47,9 @@ Widget mainBody(context) {
                     },
                     child: Text(
                       "Proslijedi",
-                      style: Styles.yellowButtonText,
+                      style: yellowButtonText,
                     ),
-                    style: Styles.yellowButton,
+                    style: yellowButton,
                   ),
                 ),
               ),

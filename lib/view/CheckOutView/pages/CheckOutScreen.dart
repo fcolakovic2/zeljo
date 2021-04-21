@@ -24,7 +24,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
         backgroundColor: Colors.white,
         title: Text(
           'Korpa',
-          style: Styles.headerBasket,
+          style: headerBasket,
         ),
       ),
       body: mainBody(context),
