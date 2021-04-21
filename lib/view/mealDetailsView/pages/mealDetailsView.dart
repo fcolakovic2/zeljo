@@ -3,6 +3,8 @@ import 'package:zeljoprojekat/view/mealDetailsView/widgets/addButton.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/widgets/listViewMeal.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/widgets/mealImage.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/widgets/backButton.dart';
+import 'package:cool_alert/cool_alert.dart';
+import 'package:zeljoprojekat/viewModel/addModifyViewModel.dart';
 
 class MealDetails extends StatefulWidget {
   final document;

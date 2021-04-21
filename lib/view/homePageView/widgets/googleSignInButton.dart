@@ -4,7 +4,7 @@ import 'package:zeljoprojekat/utils/shared/size_config.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/homePageView/widgets/googleLogo.dart';
 import 'package:zeljoprojekat/view/homePageView/widgets/googleTekst.dart';
-import 'package:zeljoprojekat/viewModel/signInViewModel.dart';
+import 'package:zeljoprojekat/viewModel/signingViewModel.dart';
 
 class GoogleSignInButton extends StatefulWidget {
   @override
@@ -29,12 +29,12 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                 setState(() {
                   _isSigningIn = true;
                 });
-                User user = await signInWithGoogle(context);
+                User user = await signInWithGoogleViewModel(context);
 
                 setState(() {
                   _isSigningIn = false;
                 });
-                signInFunction(context);
+                signInViewModel(context);
               },
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),

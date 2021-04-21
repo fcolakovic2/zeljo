@@ -2,7 +2,7 @@ import 'package:cool_alert/cool_alert.dart';
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
-import 'package:zeljoprojekat/viewModel/mealsViewModel.dart';
+import 'package:zeljoprojekat/viewModel/addModifyViewModel.dart';
 
 class AddButton extends StatefulWidget {
   var context;
@@ -19,7 +19,7 @@ class _AddButtonState extends State<AddButton> {
       width: MediaQuery.of(widget.context).size.width * 0.9,
       child: TextButton(
         onPressed: () {
-          addMeal(indexRadio, widget.document);
+          addMealViewModel(indexRadio, widget.document);
           CoolAlert.show(
             context: widget.context,
             title: "Čestitamo!",

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/checkOutView/widgets/mealInfo.dart';
-import 'package:zeljoprojekat/viewModel/checkOutViewModel.dart';
+import 'package:zeljoprojekat/viewModel/addModifyViewModel.dart';
 
 class ListCard extends StatefulWidget {
   var index;
@@ -39,7 +39,7 @@ class _ListCardState extends State<ListCard> {
                       naziv.removeAt(widget.index);
                       velicina.removeAt(widget.index);
                       cijena.removeAt(widget.index);
-                      changePrice();
+                      changePriceViewModel();
                     });
                   },
                   child: Icon(

@@ -4,7 +4,7 @@ import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/Bottom.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/ListViewItems.dart';
-import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
+import 'package:zeljoprojekat/viewModel/addModifyViewModel.dart';
 
 Widget mainBody(context) {
   return Scaffold(
@@ -30,7 +30,8 @@ Widget mainBody(context) {
                   child: TextButton(
                     onPressed: () {
                       if (naziv.length > 0) {
-                        addOrder();
+                        addOrderViewModel();
+                        print("s");
                         CoolAlert.show(
                           context: context,
                           title: "Hvala na narudžbi!",

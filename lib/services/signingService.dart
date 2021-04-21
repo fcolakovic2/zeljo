@@ -2,27 +2,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:zeljoprojekat/interface/signingInterface/signInInterface.dart';
+import 'package:zeljoprojekat/interface/signingInterface.dart';
 import 'package:zeljoprojekat/navigationBar.dart';
-import 'package:zeljoprojekat/utils/style/style.dart';
+import 'package:zeljoprojekat/utils/shared/snackBar.dart';
 
-class SignInService implements SignInInterface {
+class SigningService implements SigningInterface {
   @override
   signInFunction(BuildContext context) async {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (context) => MyStatefulWidget(),
-      ),
-    );
-  }
-
-  @override
-  SnackBar displaySnackBar({String content}) {
-    return SnackBar(
-      backgroundColor: Colors.black,
-      content: Text(
-        content,
-        style: stilUsera,
       ),
     );
   }

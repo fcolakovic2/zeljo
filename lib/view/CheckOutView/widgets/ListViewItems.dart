@@ -3,7 +3,7 @@ import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/checkOutView/widgets/dismissibleContainer.dart';
 import 'package:zeljoprojekat/view/checkOutView/widgets/listCard.dart';
-import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
+import 'package:zeljoprojekat/viewModel/addModifyViewModel.dart';
 
 class ListViewItems extends StatefulWidget {
   _ListViewItemsState myListState = new _ListViewItemsState();
@@ -32,7 +32,7 @@ class _ListViewItemsState extends State<ListViewItems> {
                 naziv.removeAt(index);
                 velicina.removeAt(index);
                 cijena.removeAt(index);
-                changePrice();
+                changePriceViewModel();
               });
             },
 
