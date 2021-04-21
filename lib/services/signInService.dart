@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:zeljoprojekat/interface/signingInterface/signInInterface.dart';
 import 'package:zeljoprojekat/navigationBar.dart';
-import 'package:zeljoprojekat/utils/style/style.dart';
+import 'package:zeljoprojekat/utils/shared/snackBar.dart';
 
 class SignInService implements SignInInterface {
   @override
@@ -12,17 +12,6 @@ class SignInService implements SignInInterface {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (context) => MyStatefulWidget(),
-      ),
-    );
-  }
-
-  @override
-  SnackBar displaySnackBar({String content}) {
-    return SnackBar(
-      backgroundColor: Colors.black,
-      content: Text(
-        content,
-        style: Styles.stilUsera,
       ),
     );
   }
