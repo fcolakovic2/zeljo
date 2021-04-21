@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
+import 'package:zeljoprojekat/view/checkOutView/widgets/dismissibleContainer.dart';
+import 'package:zeljoprojekat/view/checkOutView/widgets/listCard.dart';
 import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
 class ListViewItems extends StatefulWidget {
@@ -11,11 +13,6 @@ class ListViewItems extends StatefulWidget {
 }
 
 class _ListViewItemsState extends State<ListViewItems> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,67 +36,9 @@ class _ListViewItemsState extends State<ListViewItems> {
               });
             },
 
-            background: Container(
-              color: Colors.red,
-              margin: EdgeInsets.symmetric(horizontal: 15),
-              alignment: Alignment.centerRight,
-              child: Icon(
-                Icons.delete,
-                color: Colors.white,
-              ),
-            ),
+            background: dismissibleContainer(),
 
-            child: Container(
-              height: 100,
-              color: Colors.white,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          naziv[index],
-                          style: Styles.boldText,
-                        ),
-                        Text(
-                          velicina[index],
-                          style: Styles.prilog,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        cijena[index] + " KM",
-                        style: Styles.boldText,
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          setState(() {
-                            naziv.removeAt(index);
-                            velicina.removeAt(index);
-                            cijena.removeAt(index);
-                            changePrice();
-                          });
-                        },
-                        child: Icon(
-                          Icons.delete,
-                          size: 26,
-                          color: Colors.grey[500],
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            child: ListCard(index),
           );
         },
         separatorBuilder: (BuildContext context, int index) => const Divider(),
