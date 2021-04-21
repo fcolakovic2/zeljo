@@ -14,6 +14,10 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  onInit() {
+    final Future<FirebaseApp> _initialization = Firebase.initializeApp();
+  }
+
   @override
   Widget build(BuildContext context) {
     orderStatusNotification(context);

@@ -5,14 +5,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 
 class Order {
-  Order();
-
-  final Future<FirebaseApp> _initialization = Firebase.initializeApp();
-  CollectionReference orders = FirebaseFirestore.instance.collection('orders');
-  User userTrenutnii = FirebaseAuth.instance.currentUser;
-
   Future<void> addOrder() {
-    // Call the user's CollectionReference to add a new user
+    CollectionReference orders =
+        FirebaseFirestore.instance.collection('orders');
+    User userTrenutnii = FirebaseAuth.instance.currentUser;
     return orders
         .add({
           'orderStatus': "onPending",

@@ -44,7 +44,9 @@ class Notifications {
 
   // provjerava koji dokument je izmijenjen i njega salje dalje u metodu shownotification
   void orderStatusNotification() {
-    Order().orders.snapshots().listen((querySnapshot) {
+    CollectionReference orders =
+        FirebaseFirestore.instance.collection('orders');
+    orders.snapshots().listen((querySnapshot) {
       querySnapshot.docChanges.forEach((change) {
         if (change.type == DocumentChangeType.modified) {
           showNotification(change);
