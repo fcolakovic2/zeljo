@@ -9,7 +9,6 @@ class ListViewMeal extends StatefulWidget {
 }
 
 class _ListViewMealState extends State<ListViewMeal> {
-  String _porcija = porcije[0];
   int pozicija = 0;
 
   @override

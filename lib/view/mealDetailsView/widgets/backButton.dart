@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget BackButtonA(context) {
+Widget backButtonA(context) {
   return TextButton(
     onPressed: () {
       Navigator.pop(context);

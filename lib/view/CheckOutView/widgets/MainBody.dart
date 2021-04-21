@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/Bottom.dart';
-import 'package:zeljoprojekat/view/CheckOutView/widgets/Header.dart';
 import 'package:zeljoprojekat/view/CheckOutView/widgets/ListViewItems.dart';
 import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 
@@ -14,7 +13,6 @@ Widget mainBody(context) {
       height: MediaQuery.of(context).size.height,
       child: Column(
         children: [
-          // header(),
           Container(
             child: ListViewItems(),
             height: 350,
