@@ -5,10 +5,6 @@ import 'package:zeljoprojekat/interface/addModifyInterface.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 
 class AddModifyService implements AddModifyInterface {
-  final Future<FirebaseApp> _initialization = Firebase.initializeApp();
-  CollectionReference orders = FirebaseFirestore.instance.collection('orders');
-  User userTrenutnii = FirebaseAuth.instance.currentUser;
-
   @override
   void addMeal(index, document) {
     naziv.add(document['name']);
@@ -23,6 +19,9 @@ class AddModifyService implements AddModifyInterface {
 
   @override
   Future<void> addOrder() {
+    CollectionReference orders =
+        FirebaseFirestore.instance.collection('orders');
+    User userTrenutnii = FirebaseAuth.instance.currentUser;
     return orders
         .add({
           'orderStatus': "onPending",

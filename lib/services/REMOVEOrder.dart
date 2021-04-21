@@ -4,7 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
 
-class Order {
+class Order1 {
   Future<void> addOrder() {
     CollectionReference orders =
         FirebaseFirestore.instance.collection('orders');

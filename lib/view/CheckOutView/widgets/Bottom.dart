@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/utils/style/style.dart';
-import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 import 'package:zeljoprojekat/utils/dummyData/dummyData.dart';
+import 'package:zeljoprojekat/viewModel/addModifyViewModel.dart';
 
 class Bottom extends StatefulWidget {
   @override
@@ -12,7 +12,7 @@ class _BottomState extends State<Bottom> {
   @override
   void initState() {
     super.initState();
-    changePrice();
+    changePriceViewModel();
   }
 
   @override
