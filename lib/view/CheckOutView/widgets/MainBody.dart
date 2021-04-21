@@ -33,7 +33,6 @@ Widget mainBody(context) {
                     onPressed: () {
                       if (naziv.length > 0) {
                         addOrder();
-                        print("s");
                         CoolAlert.show(
                           context: context,
                           title: "Hvala na narudžbi!",
