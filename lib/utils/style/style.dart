@@ -48,3 +48,13 @@ final TextStyle boldBigText = TextStyle(
   fontSize: 20,
   color: Colors.black,
 );
+
+TextStyle textCardStyle(document) {
+  return TextStyle(
+    color: document['orderStatus'] == 'accepted'
+        ? Colors.green
+        : document['orderStatus'] == 'onPending'
+            ? Colors.black
+            : Colors.red,
+  );
+}

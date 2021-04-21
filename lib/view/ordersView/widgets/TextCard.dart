@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/ordersView/pages/ordersPage.dart';
 
 class TextCard extends StatefulWidget {
@@ -17,12 +18,13 @@ class _TextCardState extends State<TextCard> {
       color: Colors.white,
       shape: RoundedRectangleBorder(
         side: BorderSide(
-            color: widget.document['orderStatus'] == "accepted"
-                ? Colors.green
-                : widget.document['orderStatus'] == "declined"
-                    ? Colors.red
-                    : Colors.black,
-            width: 1),
+          color: widget.document['orderStatus'] == "accepted"
+              ? Colors.green
+              : widget.document['orderStatus'] == "declined"
+                  ? Colors.red
+                  : Colors.black,
+          width: 1,
+        ),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Padding(
@@ -33,32 +35,15 @@ class _TextCardState extends State<TextCard> {
             Text(
               convertDateTimeDisplay(
                   widget.document['created'].toDate().toString()),
-              style: TextStyle(
-                color: widget.document['orderStatus'] == 'accepted'
-                    ? Colors.green
-                    : widget.document['orderStatus'] == "onPending"
-                        ? Colors.black
-                        : Colors.red,
-              ),
+              style: textCardStyle(widget.document),
             ),
             Text(
               widget.document['orderStatus'],
-              style: TextStyle(
-                  color: widget.document['orderStatus'] == 'accepted'
-                      ? Colors.green
-                      : widget.document['orderStatus'] == 'onPending'
-                          ? Colors.black
-                          : Colors.red),
+              style: textCardStyle(widget.document),
             ),
             Text(
               widget.document['price'],
-              style: TextStyle(
-                color: widget.document['orderStatus'] == 'accepted'
-                    ? Colors.green
-                    : widget.document['orderStatus'] == 'onPending'
-                        ? Colors.black
-                        : Colors.red,
-              ),
+              style: textCardStyle(widget.document),
             ),
           ],
         ),
