@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/CheckOutView/pages/checkOutScreen.dart';
 import 'package:zeljoprojekat/view/MenuScreen/pages/menu_screen.dart';
-import 'package:zeljoprojekat/view/MenuScreen/widgets/menuCard.dart';
 import 'package:zeljoprojekat/view/Restaurants/pages/restaurant_screen.dart';
-import 'package:zeljoprojekat/view/mealDetailsView/pages/mealDetailsView.dart';
 import 'package:zeljoprojekat/view/ordersView/pages/ordersPage.dart';
 
 /// This is the main application widget.
