@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:zeljoprojekat/navigationBar.dart';
-import 'package:zeljoprojekat/view/Restaurants/pages/restaurant_screen.dart';
+import 'package:zeljoprojekat/view/Restaurants/pages/restauranScreen.dart';
 import 'package:zeljoprojekat/view/homePageView/pages/signInScreen.dart';
 import 'package:zeljoprojekat/viewModel/CheckOutViewModel.dart';
 

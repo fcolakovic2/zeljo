@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:zeljoprojekat/view/ordersView/widgets/TextCard.dart';
+import 'package:zeljoprojekat/view/ordersView/widgets/textCard.dart';
 import 'package:zeljoprojekat/view/ordersView/widgets/appBarText.dart';
 
 String convertDateTimeDisplay(String date) {

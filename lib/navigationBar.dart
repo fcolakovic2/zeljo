@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:zeljoprojekat/view/CheckOutView/pages/checkOutScreen.dart';
-import 'package:zeljoprojekat/view/MenuScreen/pages/menu_screen.dart';
+import 'package:zeljoprojekat/view/MenuScreen/pages/menuScreen.dart';
 import 'package:zeljoprojekat/view/MenuScreen/widgets/menuCard.dart';
-import 'package:zeljoprojekat/view/Restaurants/pages/restaurant_screen.dart';
+import 'package:zeljoprojekat/view/Restaurants/pages/restauranScreen.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/pages/mealDetailsView.dart';
 import 'package:zeljoprojekat/view/ordersView/pages/ordersPage.dart';
-
-void main() => runApp(const MyApp());
 
 /// This is the main application widget.
 class MyApp extends StatelessWidget {
