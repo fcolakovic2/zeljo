@@ -8,6 +8,6 @@ changePriceViewModel() {
   return AddModifyService().changePrice();
 }
 
-addMealViewModel(int index, Map document) {
+addMealViewModel(int index, dynamic document) {
   return AddModifyService().addMeal(index, document);
 }

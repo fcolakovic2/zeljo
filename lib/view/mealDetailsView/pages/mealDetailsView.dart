@@ -4,7 +4,7 @@ import 'package:zeljoprojekat/utils/style/style.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/widgets/listViewMeal.dart';
 import 'package:zeljoprojekat/view/mealDetailsView/widgets/mealImage.dart';
 import 'package:cool_alert/cool_alert.dart';
-import 'package:zeljoprojekat/viewModel/mealsViewModel.dart';
+import 'package:zeljoprojekat/viewModel/addModifyViewModel.dart';
 
 class MealDetails extends StatefulWidget {
   final document;
@@ -51,7 +51,7 @@ class _MealDetailsState extends State<MealDetails> {
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: TextButton(
                   onPressed: () {
-                    addMeal(indexRadio, widget.document);
+                    addMealViewModel(indexRadio, widget.document);
                     CoolAlert.show(
                       context: context,
                       title: "Čestitamo!",

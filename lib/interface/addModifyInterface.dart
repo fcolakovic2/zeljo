@@ -1,5 +1,5 @@
 abstract class AddModifyInterface {
-  void addMeal(index, document) {}
+  void addMeal(int index, dynamic document) {}
   String changePrice() {}
   Future<void> addOrder() {}
 }
